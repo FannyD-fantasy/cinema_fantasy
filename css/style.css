@@ -72,3 +72,16 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+.prices {
+  border: 1px solid #FFF;
+}
+
+.prices tr {
+  border-bottom: 1px solid #FFF;
+}
+
+.prices tr th,
+.prices tr td {
+  padding: .5rem;
+  text-align: center;
+}

@@ -75,34 +75,46 @@
         ?>
         <span>L'âge du capitaine est <?php echo $age; ?> ans et il payera sa place de cinéma <?php echo $montant; ?> €.</span>
       </p>
-      <p>
-        <?php 
-        $age = 1;
-        // PHP, grâce à une boucle, nous permet de répéter un traitement autant de fois que nous le voulons
-        // La boucle while prend entre parenthèse une expression booléenne qui va permettre à PHP de savoir s'il doit continuer la boucle
-        // Pour éviter d'être face à une boucle dite infinie, il faut penser à faire évoluer la variable que l'on utilise dans l'expression du while par exemple en l'incrémantant. Incrémenter veut dire ajouter 1 à la variable. (À l'opposé, décrémenter veut dire enlever 1 à la variable)
-        // Tant que la condition est vraie, PHP recommencera le traitement entre les accolades. Chaque traitement répété est appelé itération.
-        while ($age <= 99) {
-          // Je calcule le montant avec la valeur de la variable $age définie précédemment
-          $montant = 0;
-          if ($age <= 14) {
-              $montant = $tarifEnfant;
-          // Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
-          // || = OR
-          // && = AND
-          } elseif (($age <= 16) || ($age >= 60)) {
-              $montant = $tarifReduit;
-          } else {
-              $montant = $tarifPlein;
+      <table class="prices">
+        <thead>
+          <tr>
+            <th>Âge</th>
+            <th>Montant</th>
+          </tr>
+        </thead>
+          <tbody>
+            <?php 
+            $age = 1;
+            // PHP, grâce à une boucle, nous permet de répéter un traitement autant de fois que nous le voulons
+            // La boucle while prend entre parenthèse une expression booléenne qui va permettre à PHP de savoir s'il doit continuer la boucle
+            // Pour éviter d'être face à une boucle dite infinie, il faut penser à faire évoluer la variable que l'on utilise dans l'expression du while par exemple en l'incrémantant. Incrémenter veut dire ajouter 1 à la variable. (À l'opposé, décrémenter veut dire enlever 1 à la variable)
+            // Tant que la condition est vraie, PHP recommencera le traitement entre les accolades. Chaque traitement répété est appelé itération.
+            while ($age <= 99) {
+              // Je calcule le montant avec la valeur de la variable $age définie précédemment
+              $montant = 0;
+              if ($age <= 14) {
+                  $montant = $tarifEnfant;
+              // Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
+              // || = OR
+              // && = AND
+              } elseif (($age <= 16) || ($age >= 60)) {
+                  $montant = $tarifReduit;
+              } else {
+                  $montant = $tarifPlein;
+              }
+              ?>
+                <tr>
+                  <td><?php echo $age; ?> ans</td>
+                  <td><?php echo $montant; ?> €</td>
+                </tr>
+              <?php
+
+              // Habituellement, on incrémente la valeur de la variable utilisée dans l'expression à la fin du traitement exécuté par la boucle while
+              $age = $age + 1;
           }
           ?>
-          <span><?php echo $age; ?> an : <?php echo $montant; ?> €</span>
-          <?php
-
-          // Habituellement, on incrémente la valeur de la variable utilisée dans l'expression à la fin du traitement exécuté par la boucle while
-          $age = $age + 1;
-      }
-      ?>
+        </tbody>
+      </table>
     </section>
   </main>
   <footer>
