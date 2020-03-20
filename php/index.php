@@ -23,7 +23,7 @@
   </header>
   <main>
     <section>
-      <p>TODO</p>
+      <p><?php echo 'Hello World!'; ?></p>
     </section>
   </main>
   <footer>
@@ -31,3 +31,9 @@
   </footer>
 </body>
 </html>
+
+
+
+
+<?php 
+//donc php permet de modifier les éléments affichés tout en gardant la structure html
