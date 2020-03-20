@@ -12,14 +12,14 @@
 <body>
   <header>
     <h1>Cinéma Rodia</h1>
-    <nav>
-      <ul>
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="#">En salle</a></li>
-        <li><a href="tarifs.php">Tarifs</a></li>
-        <li><a href="#">Nous contacter</a></li>
-      </ul>
-    </nav>
+    <?php 
+     // Je demande à PHP de récupérer le contenu d'un autre fichier avec l'instruction include (https://www.php.net/manual/fr/function.include.php)
+    // Si le fichier n'existe pas, PHP délenchera une erreur de type Warning et continuera de traiter le fichier
+    // Si des variables sont crées dans le fichier inclus, elles seront accessibles dans la suite du code
+    // On peut utiliser l'inclusion de fichier avec PHP pour éviter de nous répéter dans le code HTML. On parle de factorisation du code HTML.
+    // La factorisation du code permet de faciliter le maintenance de celui-ci. Dans le cas d'une navigation factorisée, on n'aura plus qu'à modifier le template si une nouvelle page est à ajouter dans la navigation au lieu de modifier toutes les pages une par une.
+    include 'template/navigation.php';
+    ?>
   </header>
   <main>
     <section>
