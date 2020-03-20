@@ -1,3 +1,12 @@
+<?php 
+//je definie les varaibles des differents tarifs
+//il est interressant de créer les varaibles au debut du document de manière à ce qu'elles soient accessibles à tout moment dans le document HTML
+// Les variables permettent de recycler les valeurs que l'on veut utiliser dans la page plutôt que d'avoir à les écrire à chaque fois en dur. On peut parler de dynamisation des informations de la page.
+        $tarifPlein = 8.3;
+        $tarifReduit = 6.8;
+        $tarifEnfant = 4.5;
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,9 +35,9 @@
       <h2>Tarifs</h2>
         <div class="flex">
           <ul>
-            <li>Tarif Plein : 8,30 &euro;</li>
-            <li>Tarif Réduit : 6,80 &euro;</li>
-            <li>Tarif Enfant : 4,50 &euro;</li>
+            <li>Tarif Plein : <?php echo $tarifPlein; ?> &euro;</li>
+            <li>Tarif Réduit : <?php echo $tarifReduit; ?> &euro;</li>
+            <li>Tarif Enfant : <?php echo $tarifEnfant; ?> &euro;</li>
             <li>Supplément 3D : 1 &euro;</li>
           </ul>
           <ul>
@@ -47,10 +56,7 @@
         //je definie la variable $age
         $age = 43;
 
-        //je definie les varaibles des differents tarifs
-        $tarifPlein = 8.3;
-        $tarifReduit = 6.8;
-        $tarifEnfant = 4.5;
+       
 
         //je calcule le montant avec la valeur de la variable definie précédemment
         $montant = 0;
