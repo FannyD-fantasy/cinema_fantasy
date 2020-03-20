@@ -115,6 +115,44 @@
           ?>
         </tbody>
       </table>
+      <table class="prices">
+        <thead>
+          <tr>
+            <th>Âge</th>
+            <th>Montant</th>
+          </tr>
+        </thead>
+        <tbody>
+            <?php
+            // La boucle for
+            // Même principe qu'une boucle while mais avec toutes les informations entre parenthèse ()
+            for (
+                $age = 1; // Traitement à faire avant de commencer la boucle (exécuté qu'une seule fois)
+                $age <= 99; // Expression à tester avant de continuer la boucle (avant de faire une nouvelle itération) (exécutée avant de commencer une itération)
+                $age = $age + 1 // Traitement à exécuter à chaque fin d'itération
+            ) {
+                // Je calcule le montant avec la valeur de la variable $age définie précédemment
+                $montant = 0;
+                if ($age <= 14) {
+                    $montant = $tarifEnfant;
+                // Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
+                // || = OR
+                // && = AND
+                } elseif (($age <= 16) || ($age >= 60)) {
+                    $montant = $tarifReduit;
+                } else {
+                    $montant = $tarifPlein;
+                }
+                ?>
+                <tr>
+                    <td><?php echo $age; ?> ans</td>
+                    <td><?php echo $montant; ?> €</td>
+                </tr>
+                <?php
+            }
+            ?>
+        </tbody>
+      </table>
     </section>
   </main>
   <footer>
