@@ -43,7 +43,29 @@
       
       <h2>Selon votre âge</h2>
       <p>
-        todo
+        <?php
+        //je definie la variable $age
+        $age = 43;
+
+        //je definie les varaibles des differents tarifs
+        $tarifPlein = 8.3;
+        $tarifReduit = 6.8;
+        $tarifEnfant = 4.5;
+
+        //je calcule le montant avec la valeur de la variable definie précédemment
+        $montant = 0;
+        if ($age <= 14) {
+              $montant = $tarifEnfant;
+          
+          } elseif (($age <= 16) || ($age >= 60)) {
+              $montant = $tarifReduit;
+          } else {
+              $montant = $tarifPlein;
+          }
+        echo "L'age du Capitaine est $age ans et il payera se place de cinéma $montant €.";
+
+        ?>
+        <span>L'âge du capitaine est <?php echo $age; ?> ans et il payera sa place de cinéma <?php echo $montant; ?> €.</span>
       </p>
     </section>
   </main>
