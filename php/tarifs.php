@@ -23,7 +23,9 @@
     <h1>Cinéma Rodia</h1>
     <?php 
      // Je demande à PHP de récupérer le contenu d'un autre fichier avec l'instruction include (https://www.php.net/manual/fr/function.include.php)
-    // Si le fichier n'existe pas, PHP délenchera une erreur de type Warning et continuera de traiter le fichier
+    // Le chemin vers le fichier est relatif au fichier qui l'inclus (on démarre le chemin du fichier à inclure à partir du chemin du fichier qui l'inclut)
+    // Si le fichier n'existe pas, PHP délenchera une erreur de type Warning et continuera de traiter le fichier. Si require est utilisé à la place d'include, une erreur de type Fatal sera déclenchée et PHP ne continuera pas le traitement
+    // On ne peut inclure que des fichiers PHP
     // Si des variables sont crées dans le fichier inclus, elles seront accessibles dans la suite du code
     // On peut utiliser l'inclusion de fichier avec PHP pour éviter de nous répéter dans le code HTML. On parle de factorisation du code HTML.
     // La factorisation du code permet de faciliter le maintenance de celui-ci. Dans le cas d'une navigation factorisée, on n'aura plus qu'à modifier le template si une nouvelle page est à ajouter dans la navigation au lieu de modifier toutes les pages une par une.
@@ -72,6 +74,21 @@
 
         ?>
         <span>L'âge du capitaine est <?php echo $age; ?> ans et il payera sa place de cinéma <?php echo $montant; ?> €.</span>
+      </p>
+      <p>
+        <?php 
+        $age = 1;
+        $montant = 0;
+        if ($age <= 14) {
+            $montant = $tarifEnfant;
+        
+        } elseif (($age <= 16) || ($age >= 60)) {
+            $montant = $tarifReduit;
+        } else {
+            $montant = $tarifPlein;
+        }
+        ?>
+        <span><?php echo $age; ?> an : <?php echo $montant; ?> €</span>
       </p>
     </section>
   </main>
