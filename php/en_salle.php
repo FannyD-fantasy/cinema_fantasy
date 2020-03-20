@@ -20,7 +20,7 @@
       <section>   
       <h2>En salle</h2>
       <?php
-      // Je déclare une variable de type tableau (array)
+      // Je déclare une variable de type tableau (array) (https://www.php.net/manual/fr/language.types.array.php)
       // Un tableau est une liste
       // Chaque valeur dans le tableau est séparée par une virgule
       // Dans un tableau, on peut mettre des données de n'importe quel type : int, float, boolean, string, ... array
@@ -31,18 +31,27 @@
           'Contagion',
           'Joker',
           'Le jour d\'après',
+          '28 jours plus tard',
+          'The Lighthouse'
       ];
+
+      // Je récupère le nombre d'éléments que contient mon tableau avec la fonction count (https://www.php.net/manual/fr/function.count.php)
+      $nombreDeFilmsEnSalle = count($filmsEnSalle);
 
       ?>
       <ul>
         <?php
-        // J'affiche la première valeur contenu dans mon tableau (la valeur associée à l'index 0)
+        for (
+            $index = 0; // On veut afficher les éléments du tableau à partir du premier. On démarre à l'index 0.
+            $index < $nombreDeFilmsEnSalle; // On veut afficher tous éléments du tableau. Tant que mon index ne dépasse la longueur de mon tableau (sachant que le dernier élément du tableau a pour index : longueur du tableau - 1), on continue la boucle
+            $index = $index + 1 // On oublie par d'incrémenter l'index à chaque fin d'itération de la boucle (sinon boucle infinie)
+        ) {
+            // Je peux utiliser la valeur d'une variable pour récupérer un élément de mon tableau. Attention, si ma variable ne correspond à aucun élément de mon tableau, PHP déclenchera une erreur.
+            ?>
+            <li><?php echo $filmsEnSalle[$index]; ?></li>
+            <?php
+        }
         ?>
-        <li><?php echo $filmsEnSalle[0]; ?></li>
-        <li><?php echo $filmsEnSalle[1]; ?></li>
-        <li><?php echo $filmsEnSalle[2]; ?></li>
-        <li><?php echo $filmsEnSalle[3]; ?></li>
-        <li><?php echo $filmsEnSalle[4]; ?></li>
       </ul>
       </section>
     </main>
