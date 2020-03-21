@@ -157,18 +157,27 @@
     <section>
       <h2>Consommation</h2>
                 <?php
+        
+            $extras = [
+              'Popcorn' => ['quantité' => 'L', 'prix' => 2.9],
+              'Popcorn'=> ['quantité' => 'xL', 'prix' => 4],
+              'Chips'=> ['quantité' => '50g', 'prix' => 2.5],
+              'M&M\'s'=> ['quantité' => '100g', 'prix' => 4],
+              'Soda'=> ['quantité' => '33cl', 'prix' => 3.2],
+              'Evian'=> ['quantité' => '33cl', 'prix' => 3]
+            ];
+            foreach ($extras as $clef => $extras){
+              echo 'Produit : ' .$clef. '<br>';
+              foreach ($extras as $caracteristique => $valeur){
+                  echo $caracteristique. ' : ' .$valeur. '<br>'; 
+                }
+                  echo '<br>';
+              }
+
+
           
-         
-          $extras=array();
-            $extras['Nom']='Pop Corn'; // => sous-index 0
-            $extras['Quantité']='L'; // => sous-index 1
-            $extras['Prix']=2.9; // => sous-index 2
-          
-            echo " '.' $extras['Nom'] '.' $extras['Quantité'] '.'  $extras['Prix'] €.";
-            
-                  
-              
-              ?>
+
+            ?>
           
     </section>
   </main>
@@ -177,4 +186,3 @@
   </footer>
 </body>
 </html>
-
