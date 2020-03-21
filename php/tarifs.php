@@ -157,14 +157,14 @@
     <section>
       <h2>Consommation</h2>
                 <?php
-        
+            
             $extras = [
-              'Popcorn' => ['quantité' => 'L', 'prix' => 2.9],
-              'Popcorn'=> ['quantité' => 'xL', 'prix' => 4],
-              'Chips'=> ['quantité' => '50g', 'prix' => 2.5],
-              'M&M\'s'=> ['quantité' => '100g', 'prix' => 4],
-              'Soda'=> ['quantité' => '33cl', 'prix' => 3.2],
-              'Evian'=> ['quantité' => '33cl', 'prix' => 3]
+              'Popcorn' => ['Quantité' => 'L', 'Prix' => '2.90€'],
+              'Popcorn'=> ['Quantité' => 'xL', 'Prix' => '4€'],
+              'Chips'=> ['Quantité' => '50g', 'Prix' => '2.50€'],
+              'M&M\'s'=> ['Quantité' => '100g', 'Prix' => '4€'],
+              'Soda'=> ['Quantité' => '33cl', 'Prix' => '3.20€'],
+              'Evian'=> ['Quantité' => '33cl', 'Prix' => '3€']
             ];
             foreach ($extras as $clef => $extras){
               echo 'Produit : ' .$clef. '<br>';
@@ -173,10 +173,7 @@
                 }
                   echo '<br>';
               }
-
-
-          
-
+              
             ?>
           
     </section>
