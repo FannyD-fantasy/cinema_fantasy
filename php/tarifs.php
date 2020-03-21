@@ -154,9 +154,27 @@
         </tbody>
       </table>
     </section>
+    <section>
+      <h2>Consommation</h2>
+                <?php
+          
+         
+          $extras=array();
+            $extras['Nom']='Pop Corn'; // => sous-index 0
+            $extras['Quantité']='L'; // => sous-index 1
+            $extras['Prix']=2.9; // => sous-index 2
+          
+            echo " '.' $extras['Nom'] '.' $extras['Quantité'] '.'  $extras['Prix'] €.";
+            
+                  
+              
+              ?>
+          
+    </section>
   </main>
   <footer>
     Cinéma Rodia - 42, avenue Foch, Haut-Cloques &copy; Tous droits réservés
   </footer>
 </body>
 </html>
+
