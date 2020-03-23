@@ -157,11 +157,44 @@
             ?>
         </tbody>
       </table>
+        <?php
+            for (
+              $age = 1;
+              $age <= 99;
+              $age = $age + 1 // Ou $age++
+          ) {
+            $montant = 0;
+            if ($age <= 14) {
+                $montant = $tarifEnfant;
+                // Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
+                // || = OR
+                // && = AND
+            } elseif (($age <= 16) || ($age >= 60)) {
+                $montant = $tarifReduit;
+            } else {
+                $montant = $tarifPlein;
+            }
+            
+            // Plutôt que de remettre la logique de calcul de la réduction dans les deux traitements associés à ma condition, je génère une variable qui contient la réduction à appliquer en fonction de l'âge
+        if ($age <= 25) {
+              // -20 %
+              $reductionAbonnement = 20;
+          } else {
+              // - 10 %
+              $reductionAbonnement = 10;
+          }
+              // Pour ensuite faire le calcul en dehors de la condition
+              $montantPlaceAbonnement = $montant - ($montant * ($reductionAbonnement / 100));
+
+          echo '<pre>';
+          var_dump($age, $montant, $montantPlaceAbonnement);
+          echo '</pre><hr />';
+              }
+        ?>
     </section>
     <section>
       <h2>Consommation</h2>
-                <?php
-            
+          <?php
             $extras = [
               'Popcorn' => ['Quantité' => 'L', 'Prix' => '2.90€'],
               'Popcorn'=> ['Quantité' => 'xL', 'Prix' => '4€'],
