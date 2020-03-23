@@ -75,6 +75,8 @@
         ?>
         <span>L'âge du capitaine est <?php echo $age; ?> ans et il payera sa place de cinéma <?php echo $montant; ?> €.</span>
       </p>
+      <?php
+      /*
       <table class="prices">
         <thead>
           <tr>
@@ -115,6 +117,8 @@
           ?>
         </tbody>
       </table>
+      */
+      ?>
       <table class="prices">
         <thead>
           <tr>
