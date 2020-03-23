@@ -5,6 +5,9 @@
         $tarifPlein = 8.3;
         $tarifReduit = 6.8;
         $tarifEnfant = 4.5;
+
+        $reductionAbonnement = 10;
+        $reductionAbonnementMoins25ans = 20;
 ?>
 
 <!DOCTYPE html>
@@ -43,8 +46,8 @@
             <li>Supplément 3D : 1 &euro;</li>
           </ul>
           <ul>
-            <li>Abonnement 5 places : -10%</li>
-            <li>Abonnement 5 places -25ans : -20%</li>
+            <li>Abonnement 5 places : -<?php echo $reductionAbonnement; ?>%</li>
+            <li>Abonnement 5 places -25ans : -<?php echo $reductionAbonnementMoins25ans; ?>%</li>
           </ul>
         </div>
         <p>
@@ -84,48 +87,41 @@
             <th>Montant</th>
           </tr>
         </thead>
-        <tbody>
-        <?php
-        $age = 1;
+          <tbody>
+            <?php 
+            $age = 1;
+            // PHP, grâce à une boucle, nous permet de répéter un traitement autant de fois que nous le voulons
+            // La boucle while prend entre parenthèse une expression booléenne qui va permettre à PHP de savoir s'il doit continuer la boucle
+            // Pour éviter d'être face à une boucle dite infinie, il faut penser à faire évoluer la variable que l'on utilise dans l'expression du while par exemple en l'incrémantant. Incrémenter veut dire ajouter 1 à la variable. (À l'opposé, décrémenter veut dire enlever 1 à la variable)
+            // Tant que la condition est vraie, PHP recommencera le traitement entre les accolades. Chaque traitement répété est appelé itération.
+            while ($age <= 99) {
+              // Je calcule le montant avec la valeur de la variable $age définie précédemment
+              $montant = 0;
+              if ($age <= 14) {
+                  $montant = $tarifEnfant;
+              // Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
+              // || = OR
+              // && = AND
+              } elseif (($age <= 16) || ($age >= 60)) {
+                  $montant = $tarifReduit;
+              } else {
+                  $montant = $tarifPlein;
+              }
+              ?>
+                <tr>
+                  <td><?php echo $age; ?> ans</td>
+                  <td><?php echo $montant; ?> €</td>
+                </tr>
+              <?php
 
-        // PHP, grâce à une boucle, nous permet de répéter un traitement autant de fois que nous le voulons
-        // La boucle while (https://www.php.net/manual/fr/control-structures.while.php) prend entre parenthèse une expression booléenne qui va permettre à PHP de savoir s'il doit continuer la boucle
-        // Pour éviter d'être face à une boucle dite infinie, il faut penser à faire évoluer la variable que l'on utilise dans l'expression du while par exemple en l'incrémentant. Incrémenter veut dire ajouter 1 à la variable. (À l'opposé, décrémenter veut dire enlever 1 à la variable)
-        // Tant que la condition est vraie, PHP recommencera le traitement entre les accolades. Chaque traitement répété est une itération de la boucle.
-        // Tant que l'âge est inférieur ou égal à 99, je réexécute les instructions entre accoloades de ma boucle
-        while ($age <= 99) {
-            // Je calcule le montant avec la valeur de la variable $age définie précédemment
-            $montant = 0;
-            if ($age <= 14) {
-                $montant = $tarifEnfant;
-            // Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
-            // || = OR
-            // && = AND
-            } elseif (($age <= 16) || ($age >= 60)) {
-                $montant = $tarifReduit;
-            } else {
-                $montant = $tarifPlein;
-            }
-
-            // Dans une boucle while comme dans un if, on peut fermer la balise PHP pour afficher du code HTML et ensuite la rouvrir pour faire un traitement PHP ou fermer la boucle
-            ?>
-            <tr>
-                <td><?php echo $age; ?> ans</td>
-                <td><?php echo $montant; ?> €</td>
-            </tr>
-            <?php
-
-            // Habituellement, on incrémente la valeur de la variable utilisée dans l'expression à la fin du traitement exécuté par la boucle while
-            $age = $age + 1;
-
-        // Quand on ferme on milieu de la boucle la balise <?php, il faut quand même penser à fermer la boucle avec l'accolade fermante (sinon erreur Parse error: syntax error, unexpected end of file)
-        }
-        ?>
+              // Habituellement, on incrémente la valeur de la variable utilisée dans l'expression à la fin du traitement exécuté par la boucle while
+              $age = $age + 1;
+          }
+          ?>
         </tbody>
       </table>
       */
       ?>
-
       <table class="prices">
         <thead>
           <tr>
@@ -160,13 +156,13 @@
                 // Plutôt que de remettre la logique de calcul de la réduction dans les deux traitements associés à ma condition, je génère une variable qui contient la réduction à appliquer en fonction de l'âge
                 if ($age <= 25) {
                     // -20 %
-                    $reductionAbonnement = 20;
+                    $pourcentageReduction = $reductionAbonnementMoins25ans;
                 } else {
                     // - 10 %
-                    $reductionAbonnement = 10;
+                    $pourcentageReduction = $reductionAbonnement;
                 }
                 // Pour ensuite faire le calcul en dehors de la condition
-                $montantPlaceAbonnement = $montant - ($montant * ($reductionAbonnement / 100));
+                $montantPlaceAbonnement = $montant - ($montant * ($pourcentageReduction / 100));
 
                 $montantAbonnement = $montantPlaceAbonnement * 5;
                 ?>
@@ -218,6 +214,28 @@
       }
       */
       ?>
+    </section>
+    <section>
+      <h2>Consommation</h2>
+          <?php
+            $extras = [
+              'Popcorn' => ['Quantité' => 'L', 'Prix' => '2.90€'],
+              'Popcorn'=> ['Quantité' => 'xL', 'Prix' => '4€'],
+              'Chips'=> ['Quantité' => '50g', 'Prix' => '2.50€'],
+              'M&M\'s'=> ['Quantité' => '100g', 'Prix' => '4€'],
+              'Soda'=> ['Quantité' => '33cl', 'Prix' => '3.20€'],
+              'Evian'=> ['Quantité' => '33cl', 'Prix' => '3€']
+            ];
+            foreach ($extras as $clef => $extras){
+              echo 'Produit : ' .$clef. '<br>';
+              foreach ($extras as $caracteristique => $valeur){
+                  echo $caracteristique. ' : ' .$valeur. '<br>'; 
+                }
+                  echo '<br>';
+              }
+              
+            ?>
+          
     </section>
   </main>
   <footer>
