@@ -2,12 +2,33 @@
 //je definie les varaibles des differents tarifs
 //il est interressant de créer les varaibles au debut du document de manière à ce qu'elles soient accessibles à tout moment dans le document HTML
 // Les variables permettent de recycler les valeurs que l'on veut utiliser dans la page plutôt que d'avoir à les écrire à chaque fois en dur. On peut parler de dynamisation des informations de la page.
-        $tarifPlein = 8.3;
-        $tarifReduit = 6.8;
-        $tarifEnfant = 4.5;
+/*$tarifPlein = 8.3;
+$tarifReduit = 6.8;
+$tarifEnfant = 4.5;
 
-        $reductionAbonnement = 10;
-        $reductionAbonnementMoins25ans = 20;
+$reductionAbonnement = 10;
+$reductionAbonnementMoins25ans = 20;
+*/
+// $tarifs est un tableau associatif. Un tableau associatif est un tableau où l'on définit les index manuellement. Et souvent, les index sont de type chaîne de caractères (string)
+// La syntaxe qui permet de forcer la valeur de l'index est : index => valeur
+$tarifs = [
+// index => valeur
+'plein' => 8.30, // 'plein' : $tarifs['plein']
+'reduit' => 6.80, // 'reduit' : $tarifs['reduit']
+'enfant' => 4.50, // 'enfant' : $tarifs['enfant']
+
+];
+
+$abonnements = [
+  'plein' => 10,
+  'reduit'=> 20
+]
+/*
+// Pour accéder aux données d'un tableau, on utilise l'index (la clé) comme ceci :
+echo $tarifs['plein'];
+echo $tarifs['reduit'];
+echo $tarifs['enfant'];
+*/
 ?>
 
 <!DOCTYPE html>
@@ -40,14 +61,14 @@
       <h2>Tarifs</h2>
         <div class="flex">
           <ul>
-            <li>Tarif Plein : <?php echo $tarifPlein; ?> &euro;</li>
-            <li>Tarif Réduit : <?php echo $tarifReduit; ?> &euro;</li>
-            <li>Tarif Enfant : <?php echo $tarifEnfant; ?> &euro;</li>
+            <li>Tarif Plein : <?php echo $tarifs['plein']; ?> &euro;</li>
+            <li>Tarif Réduit : <?php echo $tarifs['reduit']; ?> &euro;</li>
+            <li>Tarif Enfant : <?php echo $tarifs['enfant']; ?> &euro;</li>
             <li>Supplément 3D : 1 &euro;</li>
           </ul>
           <ul>
-            <li>Abonnement 5 places : -<?php echo $reductionAbonnement; ?>%</li>
-            <li>Abonnement 5 places -25ans : -<?php echo $reductionAbonnementMoins25ans; ?>%</li>
+            <li>Abonnement 5 places : -<?php echo $abonnements['plein']; ?>%</li>
+            <li>Abonnement 5 places -25ans : -<?php echo $abonnements['reduit']; ?>%</li>
           </ul>
         </div>
         <p>
@@ -66,12 +87,12 @@
         //je calcule le montant avec la valeur de la variable definie précédemment
         $montant = 0;
         if ($age <= 14) {
-              $montant = $tarifEnfant;
+              $montant = $tarif['enfant'];
           
           } elseif (($age <= 16) || ($age >= 60)) {
-              $montant = $tarifReduit;
+              $montant = $tarifs['reduit'];
           } else {
-              $montant = $tarifPlein;
+              $montant = $tarifs['plein'];
           }
         echo "L'age du Capitaine est $age ans et il payera se place de cinéma $montant €.";
 
@@ -143,23 +164,23 @@
                 // Je calcule le montant avec la valeur de la variable $age définie précédemment
                 $montant = 0;
                 if ($age <= 14) {
-                    $montant = $tarifEnfant;
+                    $montant = $tarifs['enfant'];
                 // Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
                 // || = OR
                 // && = AND
                 } elseif (($age <= 16) || ($age >= 60)) {
-                    $montant = $tarifReduit;
+                    $montant = $tarifs['reduit'];
                 } else {
-                    $montant = $tarifPlein;
+                    $montant = $tarifs['plein'];
                 }
 
                 // Plutôt que de remettre la logique de calcul de la réduction dans les deux traitements associés à ma condition, je génère une variable qui contient la réduction à appliquer en fonction de l'âge
                 if ($age <= 25) {
                     // -20 %
-                    $pourcentageReduction = $reductionAbonnementMoins25ans;
+                    $pourcentageReduction = $abonnements['plein'];
                 } else {
                     // - 10 %
-                    $pourcentageReduction = $reductionAbonnement;
+                    $pourcentageReduction = $abonnements['reduit'];
                 }
                 // Pour ensuite faire le calcul en dehors de la condition
                 $montantPlaceAbonnement = $montant - ($montant * ($pourcentageReduction / 100));
