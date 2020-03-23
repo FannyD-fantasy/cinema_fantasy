@@ -36,6 +36,7 @@
       ];
 
       // Je récupère le nombre d'éléments que contient mon tableau avec la fonction count (https://www.php.net/manual/fr/function.count.php)
+      /*
       $nombreDeFilmsEnSalle = count($filmsEnSalle);
 
       ?>
@@ -50,8 +51,13 @@
             ?>
             <li><?php echo $filmsEnSalle[$index]; ?></li>
             <?php
+        }*/
+        foreach ($filmsEnSalle as $film) {
+          ?>
+          <li><?php echo $film; ?></li>
+          <?php
         }
-        ?>
+      ?>
       </ul>
       </section>
       <section>
@@ -68,7 +74,7 @@
           ?>
             <ul>
             <?php
-              for (
+              /*for (
                   $index = 0; // On veut afficher les éléments du tableau à partir du premier. On démarre à l'index 0.
                   $index < count($rooms); // On veut afficher tous éléments du tableau. Tant que mon index ne dépasse la longueur de mon tableau (sachant que le dernier élément du tableau a pour index : longueur du tableau - 1), on continue la boucle
                   $index = $index + 1 // On oublie par d'incrémenter l'index à chaque fin d'itération de la boucle (sinon boucle infinie)
@@ -77,8 +83,15 @@
                   ?>
                   <li><?php echo $rooms[$index]; ?></li>
                   <?php
-              }
-              ?>
+              }*/
+
+              foreach ($rooms as $nomRoom) {
+                ?>
+                <li><?php echo $nomRoom; ?></li>
+                <?php
+            }
+            ?>
+            
             </ul>
       </section>
     </main>

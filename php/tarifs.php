@@ -247,9 +247,9 @@ echo $tarifs['enfant'];
               'Soda'=> ['Quantité' => '33cl', 'Prix' => '3.20€'],
               'Evian'=> ['Quantité' => '33cl', 'Prix' => '3€']
             ];
-            foreach ($extras as $clef => $extras){
+            foreach ($extras as $clef => $value){
               echo 'Produit : ' .$clef. '<br>';
-              foreach ($extras as $caracteristique => $valeur){
+              foreach ($value as $caracteristique => $valeur){
                   echo $caracteristique. ' : ' .$valeur. '<br>'; 
                 }
                   echo '<br>';
