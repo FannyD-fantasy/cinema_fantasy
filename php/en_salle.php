@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Cinéma Rodia - En salle</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-  <link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <header>
-    <h1>Cinéma Rodia</h1>
-    <?php 
-    include 'template/navigation.php';
-    ?>
-  </header>
-    <main> 
+<?php 
+    include 'template/head.php';
+    ?> 
       <section>   
       <h2>En salle</h2>
+      <ul>
       <?php
       // Je déclare une variable de type tableau (array) (https://www.php.net/manual/fr/language.types.array.php)
       // Un tableau est une liste
@@ -40,7 +25,7 @@
       $nombreDeFilmsEnSalle = count($filmsEnSalle);
 
       ?>
-      <ul>
+     
         <?php
         for (
             $index = 0; // On veut afficher les éléments du tableau à partir du premier. On démarre à l'index 0.
@@ -52,6 +37,7 @@
             <li><?php echo $filmsEnSalle[$index]; ?></li>
             <?php
         }*/
+        
         foreach ($filmsEnSalle as $film) {
           ?>
           <li><?php echo $film; ?></li>
@@ -94,9 +80,6 @@
             
             </ul>
       </section>
-    </main>
-  <footer>
-    Cinéma Rodia - 42, avenue Foch, Haut-Cloques &copy; Tous droits réservés
-  </footer>
-</body>
-</html>
+      <?php 
+    include 'template/footer.php';
+    ?>
