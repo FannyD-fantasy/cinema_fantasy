@@ -22,12 +22,16 @@ function calculerTarif($age)
     // Pas obligatoire mais : je déclare la variable que je vais retourner au début de la fonction avec sa valeur par défaut.
     $montant = 0;
 
-    // La variable $tarifs est spécifique à ma fonction. Elle n'aura pas d'impact sur l'extérieur ni sera accessible à l'extérieur
+     // La variable $tarifs est spécifique à ma fonction. Elle n'aura pas d'impact sur l'extérieur ni sera accessible à l'extérieur
+    /*
     $tarifs = [
         'plein' => 8.30,
         'reduit' => 6.80,
         'enfant' => 4.50,
     ];
+    */
+    // Dans une fonction, je peux appeler d'autres fonctions
+    $tarifs = recupererTarifs();
 
     if ($age <= 14) {
         $montant = $tarifs['enfant'];
@@ -76,3 +80,14 @@ var_dump($ageCapitaine, $toto);
 echo calculerTarif($ageCapitaine);
 echo $ageCapitaine;
 */
+
+
+function recupererTarifs() {
+    $tarifs = [
+        'plein' => 9.00,
+        'reduit' => 6.80,
+        'enfant' => 4.50
+    ];
+
+    return $tarifs;
+}

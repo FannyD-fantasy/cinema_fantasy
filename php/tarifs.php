@@ -2,6 +2,7 @@
 // J'inclus un fichier contenant la déclaration d'une ou plusieurs fonctions, elles seront accessible dans le code de la page.
 include 'utils/fonctions.php';
 
+
 //$pageTitle = 'Tarifs';
 //je definie les varaibles des differents tarifs
 //il est interressant de créer les varaibles au debut du document de manière à ce qu'elles soient accessibles à tout moment dans le document HTML
@@ -15,13 +16,7 @@ $reductionAbonnementMoins25ans = 20;
 */
 // $tarifs est un tableau associatif. Un tableau associatif est un tableau où l'on définit les index manuellement. Et souvent, les index sont de type chaîne de caractères (string)
 // La syntaxe qui permet de forcer la valeur de l'index est : index => valeur
-$tarifs = [
-// index => valeur
-'plein' => 8.30, // 'plein' : $tarifs['plein']
-'reduit' => 6.80, // 'reduit' : $tarifs['reduit']
-'enfant' => 4.50, // 'enfant' : $tarifs['enfant']
-
-];
+$tarifs = recupererTarifs();
 
 $abonnements = [
   'plein' => 10,
