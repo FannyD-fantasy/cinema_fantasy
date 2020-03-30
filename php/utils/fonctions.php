@@ -1,4 +1,6 @@
 <?php
+// Quand un traitement, une logique se répète dans notre code, on peut le factoriser dans un fonction car PHP nous permet de créer des fonctions utilisateur.
+// Une fonction permet d'éviter de copier / coller plusieurs fois le même code à différents endroits de l'application. Il est beaucoup pratique, notamment pour la maintenance / évolution de l'application de positionner certains traitements dans des fonctions. Elles sont également pratique lorsque l'on travaille en équipe : plutôt que de copier / coller le code du collègue (qui peut évoluer dans le temps et qu'il faudra penser à mettre à jour (la galère !!!)), on peut utiliser une fonction qui centralisera toute la logique.
 // On peut créer des fonctions dites d'utilisateur avec le mot clé function (https://www.php.net/manual/fr/functions.user-defined.php)
 // Toute fonction créée doit avoir un nom
 // Toutes les variables créées à l'intérieur de la fonction ne seront accessibles qu'à l'intérieur de celle-ci.
@@ -14,6 +16,7 @@ Différence paramètre / argument :
 On peut imaginer que PHP fait, au début de traitement de la fonction quand on a (pour calculerTarif(5)), $age = 5;
 
 */
+// Une fonction peut avoir autant de paramètre que l'on veut. On les sépare par des virgules dans la déclaration de la fonction
 function calculerTarif($age)
 {
     // Pas obligatoire mais : je déclare la variable que je vais retourner au début de la fonction avec sa valeur par défaut.

@@ -1,5 +1,8 @@
 <?php 
-$pageTitle = 'Tarifs';
+// J'inclus un fichier contenant la déclaration d'une ou plusieurs fonctions, elles seront accessible dans le code de la page.
+include 'utils/fonctions.php';
+
+//$pageTitle = 'Tarifs';
 //je definie les varaibles des differents tarifs
 //il est interressant de créer les varaibles au debut du document de manière à ce qu'elles soient accessibles à tout moment dans le document HTML
 // Les variables permettent de recycler les valeurs que l'on veut utiliser dans la page plutôt que d'avoir à les écrire à chaque fois en dur. On peut parler de dynamisation des informations de la page.
@@ -25,7 +28,7 @@ $abonnements = [
   'reduit'=> 20
 ]
 /*
-// Pour accéder aux données d'un tableau, on utilise l'index (la clé) comme ceci :
+ Pour accéder aux données d'un tableau, on utilise l'index (la clé) comme ceci :
 echo $tarifs['plein'];
 echo $tarifs['reduit'];
 echo $tarifs['enfant'];
@@ -57,22 +60,13 @@ echo $tarifs['enfant'];
       <h2>Selon votre âge</h2>
       <p>
         <?php
-        //je definie la variable $age
-        $age = 43;
+         // Je définis la variable $age
+    $age = 43;
 
-       
+    // Je calcule le montant avec la valeur de la variable $age définie précédemment en appelant la fonction calculerTarif
+    $montant = calculerTarif($age);
 
-        //je calcule le montant avec la valeur de la variable definie précédemment
-        $montant = 0;
-        if ($age <= 14) {
-              $montant = $tarif['enfant'];
-          
-          } elseif (($age <= 16) || ($age >= 60)) {
-              $montant = $tarifs['reduit'];
-          } else {
-              $montant = $tarifs['plein'];
-          }
-        echo "L'age du Capitaine est $age ans et il payera se place de cinéma $montant €.";
+    echo "<span>L'âge du capitaine est ${age} ans et il payera sa place de cinéma ${montant} €.</span>";
 
         ?>
         <span>L'âge du capitaine est <?php echo $age; ?> ans et il payera sa place de cinéma <?php echo $montant; ?> €.</span>
@@ -89,18 +83,18 @@ echo $tarifs['enfant'];
           <tbody>
             <?php 
             $age = 1;
-            // PHP, grâce à une boucle, nous permet de répéter un traitement autant de fois que nous le voulons
-            // La boucle while prend entre parenthèse une expression booléenne qui va permettre à PHP de savoir s'il doit continuer la boucle
-            // Pour éviter d'être face à une boucle dite infinie, il faut penser à faire évoluer la variable que l'on utilise dans l'expression du while par exemple en l'incrémantant. Incrémenter veut dire ajouter 1 à la variable. (À l'opposé, décrémenter veut dire enlever 1 à la variable)
-            // Tant que la condition est vraie, PHP recommencera le traitement entre les accolades. Chaque traitement répété est appelé itération.
+             PHP, grâce à une boucle, nous permet de répéter un traitement autant de fois que nous le voulons
+            La boucle while prend entre parenthèse une expression booléenne qui va permettre à PHP de savoir s'il doit continuer la boucle
+            Pour éviter d'être face à une boucle dite infinie, il faut penser à faire évoluer la variable que l'on utilise dans l'expression du while par exemple en l'incrémantant. Incrémenter veut dire ajouter 1 à la variable. (À l'opposé, décrémenter veut dire enlever 1 à la variable)
+            Tant que la condition est vraie, PHP recommencera le traitement entre les accolades. Chaque traitement répété est appelé itération.
             while ($age <= 99) {
-              // Je calcule le montant avec la valeur de la variable $age définie précédemment
+              Je calcule le montant avec la valeur de la variable $age définie précédemment
               $montant = 0;
               if ($age <= 14) {
                   $montant = $tarifEnfant;
-              // Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
-              // || = OR
-              // && = AND
+               Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
+               || = OR
+               && = AND
               } elseif (($age <= 16) || ($age >= 60)) {
                   $montant = $tarifReduit;
               } else {
@@ -113,7 +107,7 @@ echo $tarifs['enfant'];
                 </tr>
               <?php
 
-              // Habituellement, on incrémente la valeur de la variable utilisée dans l'expression à la fin du traitement exécuté par la boucle while
+               Habituellement, on incrémente la valeur de la variable utilisée dans l'expression à la fin du traitement exécuté par la boucle while
               $age = $age + 1;
           }
           ?>
@@ -139,18 +133,9 @@ echo $tarifs['enfant'];
                 $age <= 99; // Expression à tester avant de continuer la boucle (avant de faire une nouvelle itération) (exécutée avant de commencer une itération)
                 $age = $age + 1 // Traitement à exécuter à chaque fin d'itération
             ) {
-                // Je calcule le montant avec la valeur de la variable $age définie précédemment
-                $montant = 0;
-                if ($age <= 14) {
-                    $montant = $tarifs['enfant'];
-                // Je n'ai pas besoin de rester que j'ai plus de 14 vu que c'est la condition précédente qui l'a fait
-                // || = OR
-                // && = AND
-                } elseif (($age <= 16) || ($age >= 60)) {
-                    $montant = $tarifs['reduit'];
-                } else {
-                    $montant = $tarifs['plein'];
-                }
+                // Je calcule le montant avec la valeur de la variable $age définie précédemment avec la fonction calculerTarif
+                $montant = calculerTarif($age);
+
 
                 // Plutôt que de remettre la logique de calcul de la réduction dans les deux traitements associés à ma condition, je génère une variable qui contient la réduction à appliquer en fonction de l'âge
                 if ($age <= 25) {
