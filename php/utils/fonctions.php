@@ -1,11 +1,4 @@
 <?php
-
-$tarifs = [
-    'plein' => 9.00,
-    'reduit' => 6.80,
-    'enfant' => 4.50,
-];
-
 // On peut créer des fonctions dites d'utilisateur avec le mot clé function (https://www.php.net/manual/fr/functions.user-defined.php)
 // Toute fonction créée doit avoir un nom
 // Toutes les variables créées à l'intérieur de la fonction ne seront accessibles qu'à l'intérieur de celle-ci.
@@ -14,6 +7,13 @@ $tarifs = [
 // $age est un paramètre obligatoire de la fonction calculerTarif. Un paramètre se comporte dans le corps de la fonction (ce qu'il y a entre accolades) comme une variable classique
 // On mets en paramètre uniquement les valeurs dynamiques dans le traitement de la fonction. Par exemple, si nous définissions la variable $age manuellement dans la fonction, il faudrait créer une fonction par âge possible : LA GALERE !!! calculerTarifAge43(), calculerTarifAge44(), ... Ici, on décide que la variable $age permet de faire le calcul de la fonction : calculerTarif(43); calculerTarif(44); ...
 // Les paramètres sont les portes d'entrée
+/*
+Différence paramètre / argument :
+    - argument : c'est la valeur qu'on envoie à la fonction : calculerTarif(5). 5 est un argument
+    - paramètre : c'est la variable qui va accueillir la valeur envoyée en argument.
+On peut imaginer que PHP fait, au début de traitement de la fonction quand on a (pour calculerTarif(5)), $age = 5;
+
+*/
 function calculerTarif($age)
 {
     // Pas obligatoire mais : je déclare la variable que je vais retourner au début de la fonction avec sa valeur par défaut.
@@ -37,9 +37,11 @@ function calculerTarif($age)
         $montant = $tarifs['plein'];
     }
 
+    /*
     echo '<pre>';
     var_dump($age, $montant);
     echo '</pre><hr />';
+    */
 
     // Le contenu de la variable $montant créée dans la fonction n'étant pas accessible à l'extérieur de ma fonction, je dois le retourner.
     // On retourne une valeur avec le mot clé return.
@@ -52,21 +54,22 @@ function calculerTarif($age)
     echo 'Toto';
 }
 
-// Les noms de fonction utilisateur ne sont pas sensibles à la casse (pas de différence entre majuscules et minucules)
+/*
+Les noms de fonction utilisateur ne sont pas sensibles à la casse (pas de différence entre majuscules et minucules)
 $montant = CALCULERTARIF(5);
 var_dump($montant);
 
 $montant = calculerTarif(60);
 var_dump($montant);
 
-
-// J'appelle une fonction utilisateur de la même manière que j'appelerais une fonction de PHP.
-// Je peux exécuter la fonction autant de fois que je veux.
-// Quand j'appelle une fonction, j'exécute les traitements qui lui sont définis entre accolades.
-// Pour réceptionner la valeur retournée par la fonction, je peux l'affecter à une variable
-// Je peux envoyer le contenu d'une variable en argument de l'appel à une fonction
+J'appelle une fonction utilisateur de la même manière que j'appelerais une fonction de PHP.
+ Je peux exécuter la fonction autant de fois que je veux.
+Quand j'appelle une fonction, j'exécute les traitements qui lui sont définis entre accolades.
+ Pour réceptionner la valeur retournée par la fonction, je peux l'affecter à une variable
+Je peux envoyer le contenu d'une variable en argument de l'appel à une fonction
 $ageCapitaine = 43;
 $toto = calculerTarif($ageCapitaine);
 var_dump($ageCapitaine, $toto);
 echo calculerTarif($ageCapitaine);
 echo $ageCapitaine;
+*/
