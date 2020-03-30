@@ -1,4 +1,5 @@
 <?php 
+$pageTitle = 'Tarifs';
 //je definie les varaibles des differents tarifs
 //il est interressant de créer les varaibles au debut du document de manière à ce qu'elles soient accessibles à tout moment dans le document HTML
 // Les variables permettent de recycler les valeurs que l'on veut utiliser dans la page plutôt que d'avoir à les écrire à chaque fois en dur. On peut parler de dynamisation des informations de la page.

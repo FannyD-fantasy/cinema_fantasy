@@ -1,4 +1,5 @@
 <?php 
+  $pagetitle = 'Haut-Cloques';
     include 'template/head.php';
     ?>
     <section>
