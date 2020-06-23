@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+main {
+  padding: 2rem;
+}
+
+@font-face { 
+  font-family: "Space Age";
+  src: url('../font/space_age.ttf');
+}
+
+h1 {
+  font-family: "Space Age", sans-serif;
+  font-size: 60px;
+  color: white;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+}
+
+.header_container {
+  background-image: url(../images/fond.webp);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.header_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+.header_title {
+  padding-top: 15px;
+  padding-left: 2rem;
+}
+
+.header_nav {
+  color: white;
+  font-size: 25px;
+  margin-left: 100px;
+}
+
+.nav {
+  display: block;
+}
+
+.nav li {
+  display: inline-block;
+  padding-top: 15px;
+}
+
+.nav li a {
+  display: block;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.nav li a:hover {
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 30px;
+  color: rgb(36, 63, 138);
+}
+
+.presentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.text_presentation {
+  display: inline-block;
+  flex: 1 1 70%;
+}
+
+.img_presentation {
+  display: inline-block;
+  flex: 1 1 30%;
+}
+
+.img_presentation img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img_movies {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 40px;
+}
+
+.one_movie {
+  display: inline-block;
+  width: 244px;
+  height: 368px;
+}
+
+.one_movie img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
