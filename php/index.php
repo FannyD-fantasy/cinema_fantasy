@@ -1,8 +1,74 @@
 <?php 
-  $pagetitle = 'Haut-Cloques';
+  $pagetitle = 'Accueil';
     include 'template/head.php';
+    include 'utils/fonctions.php';
+    $prices = getPrices();
     ?>
-    
+    <section class="presentation">
+      <div>
+        <h2>Découvrez notre cinéma familliale et atypique!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur a excepturi quisquam, nesciunt consequuntur sunt soluta itaque quibusdam culpa distinctio tempora? Fugiat natus harum aspernatur, quibusdam sint soluta adipisci molestias.</p>
+      </div>
+      <div>
+        <img src="" alt="">
+      </div>
+    </section>
+    <section class="movies">
+      <div>
+        <h2>Films à l'affiche cette semaine :</h2>
+      </div>
+      <div>
+        <img src="" alt="">
+      </div>
+      <div>
+      </div>
+    </section>
+    <section class="film_session">
+      <div>
+        <h2>Programme - Semaine du 6 au 12 Juillet</h2>
+      </div>
+      <div class="day"></div>
+    </section>
+    <section class="prices">
+      <div>
+        <h2>Tarifs</h2>
+      </div>
+      <div>
+        <ul>
+          <li>Plein prices : <?php echo $prices['plein']; ?> &euro;</li>
+          <li>Enfant - de 16 ans : <?php echo $prices['enfant']; ?> &euro;</li>
+          <li>Tarif réduit * : <?php echo $prices['reduit']; ?> &euro;</li>
+        </ul>
+        <ul>
+          <li>Carte 5 places : <?php echo $prices['carte5']; ?> &euro;</li>
+          <li>Carte 10 places : <?php echo $prices['carte10']; ?> &euro;</li>
+        </ul>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="form_contact">
+        <h2>Nous contacter</h2>
+        <p>Une question ? une siggestion de film ? Ecrivez-nous un message:</p>
+        <form action="">
+          <div>
+            <label for="">Nom Prénom</label>
+            <input type="text" placeholder="Nom Prénom">
+          </div>
+          <div>
+            <label for="">Email</label>
+            <input type="email" name="" id="" placeholder="Email">
+          </div>
+          <div>
+            <label for="">Message</label>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="map">
+        <h2>Où sommes nous situé?</h2>
+
+      </div>
+    </section>
     <?php 
     include 'template/footer.php';
     ?>
