@@ -4,10 +4,6 @@ include 'utils/fonctions.php';
 
 $tarifs = recupererTarifs();
 
-$abonnements = [
-  'plein' => 10,
-  'reduit'=> 20
-];
 
 include 'template/head.php';
 ?>
@@ -25,7 +21,7 @@ include 'template/head.php';
       </ul>
     </div>
     <figure class="centerImage">
-        <img class="emptyMovieRoom" src="../assets/images/salle-de-cinema-le-cinema-de-personne-1320.png" alt="Salle une du cinema fantasy" width="600">
+      <img class="emptyMovieRoom" src="../assets/images/salle-de-cinema-le-cinema-de-personne-1320.png" alt="Salle une du cinema fantasy" width="600">
       <figcaption class="descriptionRoomMovie">Salle N°1 du Cinéma Fantasy</figcaption>
     </figure>
     

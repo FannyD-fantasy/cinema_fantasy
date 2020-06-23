@@ -115,12 +115,11 @@ footer {
 }
 
 .descriptionRoomMovie {
-  text-align: center;
+  
   font-size: smaller;
   padding-top: 1rem;
 }
 
 .room1 {
   max-width: 400px;
-  padding: 1rem;
 }
