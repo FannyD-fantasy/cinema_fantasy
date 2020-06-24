@@ -76,6 +76,7 @@ header {
 h2 {
   font-size: 30px;
   color: rgb(36, 63, 138);
+  padding: 1rem;
 }
 
 .presentation {
@@ -88,6 +89,7 @@ h2 {
 .text_presentation {
   display: inline-block;
   flex: 1 1 70%;
+  padding-right: 1.5rem;
 }
 
 .img_presentation {
@@ -101,7 +103,7 @@ h2 {
   object-fit: cover;
 }
 
-.img_movies {
+.line_img_movies {
   display: flex;
   justify-content: space-between;
   padding: 25px 40px;
