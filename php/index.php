@@ -22,23 +22,16 @@
 
         <div class="line_posters_movies">
           <div class="line_img_movies">
+            <?php foreach($movies as $movie=>$index) { if ($movie < 5) {  ?>
             <div class="one_movie">
-              <img src="<?php echo $movies[0]['image']; ?>" alt="">
+              <img src="<?php echo $index['image']; ?>" alt="">
             </div>
-            <div class="one_movie">
-              <img src="<?php echo $movies[0]['image']; ?>" alt="">
-            </div>
-            <div class="one_movie">
-              <img src="<?php echo $movies[0]['image']; ?>" alt="">
-            </div>
-            <div class="one_movie">
-              <img src="<?php echo $movies[0]['image']; ?>" alt="">
-            </div>
-            <div class="one_movie">
-              <img src="<?php echo $movies[0]['image']; ?>" alt="">
-            </div>
+            <?php
+              
+            }} ?>
           </div>
           <div class="line_info-movies">
+            <?php foreach($movies as $movie=>$index) { if ($movie <5 ) { ?>
             <div class="info_movie">
               <div class="background">
 
@@ -52,22 +45,68 @@
                 </div>
                 <div class="detail_movie">
                   <h3>
-                    titre
+                  <?php echo $index['title']; ?> (<?php echo $index['annéeDeSortie']; ?>)
                     <span>avis</span>
                   </h3>
-                  <h4>realisateur</h4>
-                  <h4>acteurs</h4>
+                  <h4><?php echo $index['realisateur']; ?></h4>
+                  <h4><?php echo $index['acteur']; ?></h4>
                   <div class="">
-                    <span>durée</span>
-                    <span>classification</span>
+                    <span><?php echo $index['durée']; ?></span>
+                    <span><?php echo $index['age']; ?></span>
                   </div>
-                  <p>synopsis</p>
+                  <p><?php echo $index['synopsis']; ?></p>
 
                 </div>
 
               </div>
 
             </div>
+            <?php }} ?>
+
+          </div>
+        </div>
+        <div class="line_posters_movies">
+          <div class="line_img_movies">
+            <?php foreach($movies as $movie=>$index) { if ($movie > 4) {  ?>
+            <div class="one_movie">
+              <img src="<?php echo $index['image']; ?>" alt="">
+            </div>
+            <?php
+              
+            }} ?>
+          </div>
+          <div class="line_info-movies">
+            <?php foreach($movies as $movie=>$index) { if ($movie > 4 ) { ?>
+            <div class="info_movie">
+              <div class="background">
+
+              </div>
+              <div class="button">
+
+              </div>
+              <div class="content_movie">
+                <div class="poster_movie">
+                  <img src="" alt="">
+                </div>
+                <div class="detail_movie">
+                  <h3>
+                  <?php echo $index['title']; ?>
+                    <span>avis</span>
+                  </h3>
+                  <h4><?php echo $index['realisateur']; ?></h4>
+                  <h4><?php echo $index['acteur']; ?></h4>
+                  <div class="">
+                    <span><?php echo $index['durée']; ?></span>
+                    <span><?php echo $index['age']; ?></span>
+                  </div>
+                  <p><?php echo $index['synopsis']; ?></p>
+
+                </div>
+
+              </div>
+
+            </div>
+            <?php }} ?>
 
           </div>
         </div>
