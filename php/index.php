@@ -20,100 +20,71 @@
       <div>
         <h2>Films à l'affiche cette semaine :</h2>
       </div>
-
       <div class="all_posters_movies">
+        <?php $iterations = count($movies);
 
+          $total = ceil($iterations/5);
+          $loopPoster = 0;
+          $loopInfos = 0;
+
+          for ($i=0; $i < $total; $i++){
+        ?>
         <div class="line_posters_movies">
           <div class="line_img_movies">
-            <?php foreach($movies as $movie=>$index) { if ($movie < 5) {  ?>
-            <div class="one_movie">
-              <img src="<?php echo $index['image']; ?>" alt="">
-            </div>
-            <?php
-              
-            }} ?>
-          </div>
-          <div class="line_info-movies">
-            <?php foreach($movies as $movie=>$index) { if ($movie <5 ) { ?>
-            <div class="info_movie">
-              <div class="background">
-
-              </div>
-              <div class="button">
-
-              </div>
-              <div class="content_movie">
-                <div class="poster_movie">
-                  <img src="" alt="">
-                </div>
-                <div class="detail_movie">
-                  <h3>
-                  <?php echo $index['title']; ?> (<?php echo $index['annéeDeSortie']; ?>)
-                    <span>avis</span>
-                  </h3>
-                  <h4><?php echo $index['realisateur']; ?></h4>
-                  <h4><?php echo $index['acteur']; ?></h4>
-                  <div class="">
-                    <span><?php echo $index['durée']; ?></span>
-                    <span><?php echo $index['age']; ?></span>
+            <?php 
+              for ($y=0 ; $y < 5; $y++){ 
+                if ($loopPoster <= $iterations) { ?>
+                  <div class="one_movie" id="movie<?php echo $loopPoster; ?>" data-infomovie="info_movie<?php echo $loopPoster; ?>">
+                    <img src="<?php echo $movies[$loopPoster]['image']; ?>" alt="">
                   </div>
-                  <p><?php echo $index['synopsis']; ?></p>
+                <?php
+                  $loopPoster++;
+                }
+              } ?>
+          </div>
+          <div class="line_info_movies">
+            <?php 
+            for ($x=0; $x < 5; $x++){
+              if ($loopInfos <= $iterations) { ?>
+                <div class="info_movie" id="info_movie<?php echo $loopInfos; ?>">
+                  <div class="background">
+
+                  </div>
+                  <span class="cross_button" data-closeid="info_movie<?php echo $loopInfos; ?>"><i class="fas fa-times"></i></span>
+                  <div class="content_movie">
+                    <div class="poster_movie">
+                      <img src="<?php echo $movies[$loopInfos]['image']; ?>" alt="">
+                    </div>
+                    <div class="detail_movie">
+                      <h3>
+                        <?php echo $movies[$loopInfos]['title']; ?> 
+                        (<?php echo $movies[$loopInfos]['annéeDeSortie']; ?>)
+                        <span class="rate_movie"><?php echo $movies[$loopInfos]['avis']; ?> 
+                        <i class="fas fa-star"></i></span>
+                      </h3>
+                      <h4>Réalisé par <strong><?php echo $movies[$loopInfos]['realisateur']; ?></strong></h4>
+                      <h4>Avec <strong><?php echo $movies[$loopInfos]['acteur']; ?></strong></h4>
+                      <div class="time_age">
+                        <span><?php echo $movies[$loopInfos]['durée']; ?></span>
+                        <span class="age"><?php echo $movies[$loopInfos]['age']; ?></span>
+                      </div>
+                      <p><?php echo $movies[$loopInfos]['synopsis']; ?></p>
+
+                    </div>
+
+                  </div>
 
                 </div>
-
-              </div>
-
-            </div>
-            <?php }} ?>
+            <?php 
+            $loopInfos++;
+            }
+          } ?>
 
           </div>
         </div>
-        <div class="line_posters_movies">
-          <div class="line_img_movies">
-            <?php foreach($movies as $movie=>$index) { if ($movie > 4) {  ?>
-            <div class="one_movie">
-              <img src="<?php echo $index['image']; ?>" alt="">
-            </div>
-            <?php
-              
-            }} ?>
-          </div>
-          <div class="line_info-movies">
-            <?php foreach($movies as $movie=>$index) { if ($movie > 4 ) { ?>
-            <div class="info_movie">
-              <div class="background">
-
-              </div>
-              <div class="button">
-
-              </div>
-              <div class="content_movie">
-                <div class="poster_movie">
-                  <img src="" alt="">
-                </div>
-                <div class="detail_movie">
-                  <h3>
-                  <?php echo $index['title']; ?>
-                    <span>avis</span>
-                  </h3>
-                  <h4><?php echo $index['realisateur']; ?></h4>
-                  <h4><?php echo $index['acteur']; ?></h4>
-                  <div class="">
-                    <span><?php echo $index['durée']; ?></span>
-                    <span><?php echo $index['age']; ?></span>
-                  </div>
-                  <p><?php echo $index['synopsis']; ?></p>
-
-                </div>
-
-              </div>
-
-            </div>
-            <?php }} ?>
-
-          </div>
-        </div>
-
+      <?php 
+    } ?>
+        
       </div>
 
     

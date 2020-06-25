@@ -21,5 +21,6 @@
       <p>Fanny Fantasy</p>
     </section>
   </footer>
+  <script src="../js/app.js"></script>
 </body>
 </html>
