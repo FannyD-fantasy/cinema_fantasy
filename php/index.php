@@ -12,7 +12,7 @@
         </p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti qui dolorum placeat odio quas optio labore quae facilis, rem impedit hic quasi quos a tempore itaque aliquam consectetur maiores numquam ullam minima ex accusantium ea nobis expedita. Beatae dolorem, magni amet molestias totam dolor, cum ea, obcaecati sint hic recusandae.</p>
       </div>
-      <div class="img_presentation">
+      <div class="img_presentation" >
         <img src="../assets/images/salle.webp" alt="">
       </div>
     </section>

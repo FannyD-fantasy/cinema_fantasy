@@ -40,10 +40,38 @@ function addInfoClickMovie (event){
 
 }
 
+window.onscroll = function () {addBackgroundNavBarOnScroll()};
+
+function addBackgroundNavBarOnScroll () {
+
+    let getPositionImage = document.getElementById('after_img_background');
+
+    let image = getPositionImage.offsetTop;
+
+    console.log('image', image);
+
+    let getPositionInPage = window.pageYOffset;
+
+    console.log('position dans la page', getPositionInPage);
+    
+
+    if (getPositionInPage > image){
+        document.getElementById("header_menu").style.backgroundColor = "#1e3f6d88";
+    } else {
+        document.getElementById("header_menu").style.backgroundColor = "transparent";
+    }
+}
+    
 
 
-document.addEventListener('DOMContentLoaded', function (){
-    addListenerCrossButton();
-    addListenerPostersMovies();
 
-});
+
+document.addEventListener(
+    'DOMContentLoaded', 
+    function (){
+        addListenerCrossButton();
+        addListenerPostersMovies();
+        addBackgroundNavBarOnScroll();
+
+        }
+);

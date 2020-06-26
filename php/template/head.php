@@ -12,8 +12,9 @@
 </head>
 <body>
   <header>
-    <div class="header_container">
-      <div class="header_menu">
+    <div class="header_container" >
+      <div class="header_menu" id="header_menu"
+      >
         <div class="header_title">
           <h1>Cinéma Fantasy</h1>
         </div>
@@ -28,4 +29,4 @@
       </div>
     </div>
   </header>
-  <main> 
+  <main id="after_img_background"> 

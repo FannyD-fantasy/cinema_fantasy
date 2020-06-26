@@ -66,7 +66,7 @@ header {
 .nav li a {
   display: block;
   padding: 1rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.5s ease;
 }
 
 .nav li a:hover {
@@ -133,6 +133,14 @@ h2 {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+  padding: 0.3rem;
+  border: 1px solid #1e3f6d;
+}
+
+.one_movie img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .content_movie {
@@ -220,4 +228,11 @@ strong {
   display: inline-block;
   padding: 1rem;
   font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.cross_button:hover {
+  transform: rotate(90deg);
+
 }
