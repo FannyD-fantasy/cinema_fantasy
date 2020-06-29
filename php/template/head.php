@@ -14,7 +14,7 @@
   <header>
     <div class="header_container" >
       <div class="header_menu" id="header_menu"
-      >
+      onscroll="addBackgroundNavBarOnScroll ()">
         <div class="header_title">
           <h1>Cinéma Fantasy</h1>
         </div>

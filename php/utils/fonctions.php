@@ -14,37 +14,37 @@ function getprices () {
 
 
 $programmingMovies = [
-    'day1' => [
+    'Lundi 6 Juillet' => [
         '10h' => 'Avatar',
         '14h' => 'Wonder Woman',
         '20h' => 'Sixième sens'
     ],
-    'day2' => [
+    'Mardi 7 Juillet' => [
         '10h' => 'Labyrinthe',
         '14h' => 'La ligne verte',
         '20h' => 'The mask'
     ],
-    'day3' => [
+    'Mercredi 8 Juillet' => [
         '10h' => 'Incassable',
         '14h' => 'BeetleJuice',
         '20h' => 'Pirates des caraïbes 1'
     ],
-    'day4' => [
+    'Jeudi 9 Juillet' => [
         '10h' => 'King Kong',
         '14h' => 'Sixème sens',
         '20h' => 'Avatar'
     ],
-    'day5' => [
+    'Vendredi 10 Juillet' => [
         '10h' => 'Wonder Woman',
         '14h' => 'Labyrinthe',
         '20h' => 'La ligne verte'
     ],
-    'day6' => [
+    'Samedi 11 Juillet' => [
         '10h' => 'Pirates des caraïbes 1',
         '14h' => 'Incassable',
         '20h' => 'BeetleJuice'
     ],
-    'day7' => [
+    'Dimanche 12 Juillet' => [
         '10h' => 'the mask',
         '14h' => 'Avatar',
         '20h' => 'King Kong'

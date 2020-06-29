@@ -44,19 +44,22 @@ window.onscroll = function () {addBackgroundNavBarOnScroll()};
 
 function addBackgroundNavBarOnScroll () {
 
+    // je récupère la position de l'image avec l'id after_img_background
     let getPositionImage = document.getElementById('after_img_background');
 
+    // je récupère la taille de l'image par rapport au haut de la page
     let image = getPositionImage.offsetTop;
 
     console.log('image', image);
 
+    // je récupère la taille de la fenêtre de l'utlisateur 
     let getPositionInPage = window.pageYOffset;
 
     console.log('position dans la page', getPositionInPage);
     
 
     if (getPositionInPage > image){
-        document.getElementById("header_menu").style.backgroundColor = "#1e3f6d88";
+        document.getElementById("header_menu").style.backgroundColor = "#1e3f6d90";
     } else {
         document.getElementById("header_menu").style.backgroundColor = "transparent";
     }

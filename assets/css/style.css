@@ -1,12 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Jost', sans-serif;
-}
-
-main {
-  
 }
 
 @font-face { 
@@ -51,7 +48,11 @@ header {
 .header_nav {
   color: white;
   font-size: 25px;
-  margin-left: 100px;
+  margin-left: 340px;
+}
+
+.onscroll {
+  background-color: #1e3f6d90;
 }
 
 .nav {
@@ -83,7 +84,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  padding-top: 2rem;
 }
 
 .text_presentation {
@@ -234,5 +235,86 @@ strong {
 
 .cross_button:hover {
   transform: rotate(90deg);
+}
 
+.week {
+ display: flex;
+ justify-content: center;
+}
+
+.day {
+  text-align: center;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.date {
+  background-color: rgba(255, 255, 255, 0.534);
+  padding: 1rem;
+  position: absolute;
+  z-index: 4;
+}
+
+.programme_of_day {
+  background-color: #4d9abe;
+  color: whitesmoke;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 2;
+}
+
+.one_show {
+  padding: 0.5rem 0;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+}
+
+footer {
+  background: rgb(20,33,82);
+  background: linear-gradient(90deg, rgba(20,33,82,1) 0%, rgba(36,63,136,1) 50%, rgba(77,154,190,1) 100%);
+  color: whitesmoke;
+}
+
+.principal_footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+.name_website {
+  text-align: center;
+}
+
+#name_cinema {
+  font-weight: 400;
+  font-family: "Space Age", sans-serif;
+}
+
+.next_movies ul {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.next_movies_title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.social_media p {
+  font-weight: 500;
+}
+
+.media_sociaux_icone {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 0.8rem;
 }
