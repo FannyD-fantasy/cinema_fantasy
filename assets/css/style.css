@@ -256,7 +256,7 @@ strong {
 }
 
 .programme_of_day {
-  background-color: #4d9abe;
+  background-color: #355d8d;
   color: whitesmoke;
   width: 200px;
   height: 250px;
@@ -271,15 +271,69 @@ strong {
   padding: 0.5rem 0;
 }
 
+.hours {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+
 .contact {
   display: flex;
   justify-content: space-around;
   padding-bottom: 2rem;
 }
 
+form {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #355d8d;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 1rem;
+  color: whitesmoke;
+}
+
+form:hover {
+  background-color: #213957;
+}
+
+form input[type=text], form input[type=email] {
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  background-color: transparent;
+  outline: none;
+  color: whitesmoke;
+}
+
+.box_form {
+  padding-bottom: 20px;
+}
+
+form input[type=submit] {
+  outline: none;
+  background-color: #355d8d;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+form input[type=submit]:hover {
+  background-color: whitesmoke;
+  color: #355d8d;
+}
+
+form textarea {
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  background-color: transparent;
+  outline: none;
+  color: whitesmoke;
+}
+
 footer {
   background: rgb(20,33,82);
-  background: linear-gradient(90deg, rgba(20,33,82,1) 0%, rgba(36,63,136,1) 50%, rgba(77,154,190,1) 100%);
+  background: linear-gradient(to bottom right, #0d0d0d 45% , #1e3f6d );;
   color: whitesmoke;
 }
 

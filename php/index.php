@@ -136,18 +136,19 @@
         <h2>Nous contacter</h2>
         <p>Une question ? une suggestion de film ? Ecrivez-nous un message:</p>
         <form action="">
-          <div>
-            <label for="">Nom Prénom</label>
-            <input type="text" placeholder="Nom Prénom">
+          <div class="box_form">
+            <label for="">Nom Prénom</label> <br>
+            <input type="text" placeholder="" required>
           </div>
-          <div>
-            <label for="">Email</label>
-            <input type="email" name="" id="" placeholder="Email">
+          <div class="box_form">
+            <label for="">Email</label> <br>
+            <input type="email" name="" id="" placeholder="" required>
           </div>
-          <div>
-            <label for="">Message</label>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+          <div class="box_form">
+            <label for="">Message</label> <br>
+            <textarea name="" id="" cols="30" rows="5" placeholder="" required></textarea>
           </div>
+          <input type="submit" value="Envoyer">
         </form>
       </div>
       <div class="map">
