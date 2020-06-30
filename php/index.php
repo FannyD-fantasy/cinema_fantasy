@@ -7,10 +7,12 @@
     <section class="presentation">
       <div class="text_presentation">
         <h2 class="title_category">Découvrez notre cinéma familliale et atypique!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur a excepturi quisquam, nesciunt consequuntur sunt soluta itaque quibusdam culpa distinctio tempora? Fugiat natus harum aspernatur, quibusdam sint soluta adipisci molestias.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae voluptatem mollitia deleniti pariatur sit tenetur repudiandae laudantium dicta vel! Officia quis tempore perspiciatis temporibus corrupti facilis unde molestias molestiae non officiis? Rem blanditiis laboriosam recusandae totam, ipsam eius ad, quia aperiam excepturi ut dicta illo ea, dolore ullam ratione officiis odio? Quaerat, tempore delectus cupiditate quas asperiores similique quo rerum dolor maiores, deserunt suscipit. Nemo, eveniet nisi similique officia corrupti ipsum quaerat error sed repellendus ipsam facere aliquam est commodi eligendi dolores explicabo esse deleniti atque inventore molestias libero.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti qui dolorum placeat odio quas optio labore quae facilis, rem impedit hic quasi quos a tempore itaque aliquam consectetur maiores numquam ullam minima ex accusantium ea nobis expedita. Beatae dolorem, magni amet molestias totam dolor, cum ea, obcaecati sint hic recusandae.</p>
+        <div class="text">
+          <p>Le cinéma Fantasy est un petit cinéma de quatier, contenant 4 salles, diffusant uniquement des films fantastiques. Chaque semaine 10 films à l'affiche, de toutes nationnalités, périodes et de tous univers.</p> <br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae voluptatem mollitia deleniti pariatur sit tenetur repudiandae laudantium dicta vel! Officia quis tempore perspiciatis temporibus corrupti facilis unde molestias molestiae non officiis? Rem blanditiis laboriosam recusandae totam, ipsam eius ad, quia aperiam excepturi ut dicta illo ea, dolore ullam ratione officiis odio? Quaerat, tempore delectus cupiditate quas asperiores similique quo rerum dolor maiores, deserunt suscipit. Nemo, eveniet nisi similique officia corrupti ipsum quaerat error sed repellendus ipsam facere aliquam est commodi eligendi dolores explicabo esse deleniti atque inventore molestias libero.
+          </p> <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti qui dolorum placeat odio quas optio labore quae facilis, rem impedit hic quasi quos a tempore itaque aliquam consectetur maiores numquam ullam minima ex accusantium ea nobis expedita. Beatae dolorem, magni amet molestias totam dolor, cum ea, obcaecati sint hic recusandae.</p>
+        </div>
       </div>
       <div class="img_presentation" >
         <img src="../assets/images/salle.webp" alt="">
