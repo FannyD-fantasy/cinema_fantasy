@@ -6,7 +6,7 @@
     ?>
     <section class="presentation">
       <div class="text_presentation">
-        <h2>Découvrez notre cinéma familliale et atypique!</h2>
+        <h2 class="title_category">Découvrez notre cinéma familliale et atypique!</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur a excepturi quisquam, nesciunt consequuntur sunt soluta itaque quibusdam culpa distinctio tempora? Fugiat natus harum aspernatur, quibusdam sint soluta adipisci molestias.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae voluptatem mollitia deleniti pariatur sit tenetur repudiandae laudantium dicta vel! Officia quis tempore perspiciatis temporibus corrupti facilis unde molestias molestiae non officiis? Rem blanditiis laboriosam recusandae totam, ipsam eius ad, quia aperiam excepturi ut dicta illo ea, dolore ullam ratione officiis odio? Quaerat, tempore delectus cupiditate quas asperiores similique quo rerum dolor maiores, deserunt suscipit. Nemo, eveniet nisi similique officia corrupti ipsum quaerat error sed repellendus ipsam facere aliquam est commodi eligendi dolores explicabo esse deleniti atque inventore molestias libero.
         </p>
@@ -18,7 +18,7 @@
     </section>
     <section id="ensalle" class="movies">
       <div>
-        <h2>Films à l'affiche cette semaine :</h2>
+        <h2 class="title_category">Films à l'affiche cette semaine :</h2>
       </div>
       <div class="all_posters_movies">
         <?php $iterations = count($movies);
@@ -91,7 +91,7 @@
     </section>
     <section id="programme" class="film_session">
       <div>
-        <h2>Programme - Semaine du 6 au 12 Juillet</h2>
+        <h2 class="title_category">Programme - Semaine du 6 au 12 Juillet</h2>
       </div>
       <div class="week">
         <?php 
@@ -99,7 +99,7 @@
             ?>
             <div class="day">
               <div class="date"><?php echo $clef; ?> </div>
-                <div class="programme_of_day pennant">   
+                <div class="programme_of_day">   
                   <?php foreach ($day as $timmingMovie => $valeur) {
                     ?>
                     <div class="one_show">
@@ -116,21 +116,30 @@
     </section>
     <section id="prices" class="prices">
       <div>
-        <h2>Tarifs</h2>
+        <h2 class="title_category">Tarifs</h2>
       </div>
-      <div>
-        <ul>
-          <li>Plein prices : <?php echo $prices['plein']; ?> &euro;</li>
-          <li>Enfant - de 16 ans : <?php echo $prices['enfant']; ?> &euro;</li>
-          <li>Tarif réduit * : <?php echo $prices['reduit']; ?> &euro;</li>
-        </ul>
-        <ul>
-          <li>Carte 5 places : <?php echo $prices['carte5']; ?> &euro;</li>
-          <li>Carte 10 places : <?php echo $prices['carte10']; ?> &euro;</li>
-        </ul>
+      <div class="prices_info">
+        <div class="ticket">
+          <i class="fas fa-ticket-alt"></i>
+        </div>
+        <div>
+          <ul>
+            <li>Plein Tarif : <?php echo $prices['plein']; ?> &euro;</li>
+            <li>Enfant - de 16 ans : <?php echo $prices['enfant']; ?> &euro;</li>
+            <li>Tarif réduit * : <?php echo $prices['reduit']; ?> &euro;</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Carte 5 places : <?php echo $prices['carte5']; ?> &euro;</li>
+            <li>Carte 10 places : <?php echo $prices['carte10']; ?> &euro;</li>
+          </ul>
+        </div>
       </div>
     </section>
-    <hr>
+    <div class="line_separation">
+      <hr>
+    </div>
     <section id="contact" class="contact">
       <div class="form_contact">
         <h2>Nous contacter</h2>

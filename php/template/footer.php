@@ -16,14 +16,14 @@
        <span class="next_movies_title">Découvrez les films à l'affiche la semaine prochaine:</span>
         <ul>
           <?php foreach ($nextMovies as $nextMovie) : ?>
-          <li><?= $nextMovie ?></li>
+          <li><i class="fas fa-film"></i><?= $nextMovie ?></li>
           <?php endforeach; ?>  
         </ul>
       </div>
     </section>
     <section class="name_website">
       <p><strong id="name_cinema"> Cinema fantasy </strong> - 44 rue du feuillet 69700 BEAUVALLON</p>
-      <p>Fanny Fantasy | <i class="fas fa-cloud"></i></p>
+      <p>FannyD. Fantasy | <i class="fas fa-cloud"></i></p>
     </section>
   </footer>
   <script src="../js/app.js"></script>
