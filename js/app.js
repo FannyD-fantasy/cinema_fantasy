@@ -30,14 +30,17 @@ function removeInfoMovie () {
 
 function addInfoClickMovie (event){
 
-    removeInfoMovie();
+    if (event.currentTarget.classList.contains('selected')) {
+        removeInfoMovie();
+    } else {
+        removeInfoMovie();
+        let elementToOpen = document.getElementById(event.currentTarget.dataset.infomovie);
 
-    let elementToOpen = document.getElementById(event.currentTarget.dataset.infomovie);
-
-    elementToOpen.classList.add('shown');
-
-    event.currentTarget.classList.add('selected');
-
+        elementToOpen.classList.add('shown');
+    
+        event.currentTarget.classList.add('selected');
+    }
+ 
 }
 
 window.onscroll = function () {addBackgroundNavBarOnScroll()};
