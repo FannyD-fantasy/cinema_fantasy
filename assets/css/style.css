@@ -76,7 +76,7 @@ header {
 
 h2 {
   font-size: 30px;
-  color: rgb(36, 63, 138);
+  color: #99681C;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -429,14 +429,48 @@ footer {
 .next_movies_title {
   font-size: 25px;
   font-weight: 300;
-}
-
-.social_media p {
-  font-weight: 500;
+  color: #99681C;
 }
 
 .media_sociaux_icone {
   text-align: center;
   font-size: 40px;
   padding-top: 0.8rem;
+}
+
+.footer_sociaux_text {
+  font-size: 25px;
+  font-weight: 300;
+  color: #99681C;
+}
+
+.calendrier_mois {
+  font-family: 'Jost', sans-serif;
+  font-size: 25px;
+  color: #99681C;
+  text-decoration: none;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.calendrier_jour {
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  text-transform: lowercase;
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.calendrier_nom_des_jours {
+  font-family: 'Jost', sans-serif;
+  color: #ca994d;
+  text-decoration: none;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  padding: 5px;
 }
