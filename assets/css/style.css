@@ -444,33 +444,9 @@ footer {
   color: #99681C;
 }
 
-.calendrier_mois {
-  font-family: 'Jost', sans-serif;
+h5 {
   font-size: 25px;
+  font-weight: 300;
   color: #99681C;
-  text-decoration: none;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.calendrier_jour {
-  font-family: 'Jost', sans-serif;
-  font-size: 20px;
-  text-transform: lowercase;
-  color: whitesmoke;
-  text-decoration: none;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.calendrier_nom_des_jours {
-  font-family: 'Jost', sans-serif;
-  color: #ca994d;
-  text-decoration: none;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 18px;
-  padding: 5px;
+  padding-bottom: 1rem;
 }
