@@ -6,7 +6,7 @@
     ?>
     <section class="presentation">
       <div class="text_presentation">
-        <h2 class="title_category">Découvrez notre cinéma familliale et atypique!</h2>
+        <h2 class="title_category"><img src="../assets/images/icons8-projecteur-de-film-26.png" alt="" height="35px"> Découvrez notre cinéma familliale et atypique!</h2>
         <div class="text">
           <p>Le cinéma Fantasy est un petit cinéma de quatier, contenant 4 salles, diffusant uniquement des films fantastiques. Chaque semaine 10 films à l'affiche, de toutes nationnalités, périodes et de tous univers.</p> <br>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro beatae voluptatem mollitia deleniti pariatur sit tenetur repudiandae laudantium dicta vel! Officia quis tempore perspiciatis temporibus corrupti facilis unde molestias molestiae non officiis? Rem blanditiis laboriosam recusandae totam, ipsam eius ad, quia aperiam excepturi ut dicta illo ea, dolore ullam ratione officiis odio? Quaerat, tempore delectus cupiditate quas asperiores similique quo rerum dolor maiores, deserunt suscipit. Nemo, eveniet nisi similique officia corrupti ipsum quaerat error sed repellendus ipsam facere aliquam est commodi eligendi dolores explicabo esse deleniti atque inventore molestias libero.
@@ -20,7 +20,7 @@
     </section>
     <section id="ensalle" class="movies">
       <div>
-        <h2 class="title_category">Films à l'affiche cette semaine :</h2>
+        <h2 class="title_category"><img src="../assets/images/icons8-début-du-film-64.png" alt="" height="35px"> Films à l'affiche cette semaine :</h2>
       </div>
       <div class="all_posters_movies">
         <?php $iterations = count($movies);
@@ -93,7 +93,7 @@
     </section>
     <section id="programme" class="film_session">
       <div>
-        <h2 class="title_category">Programme - Semaine du 6 au 12 Juillet</h2>
+        <h2 class="title_category"><img src="../assets/images/icons8-cinéma-50.png" alt="" height="35px"> Programme - Semaine du 6 au 12 Juillet</h2>
       </div>
       <div class="week">
         <?php 
@@ -118,7 +118,7 @@
     </section>
     <section id="prices" class="prices">
       <div>
-        <h2 class="title_category">Tarifs</h2>
+        <h2 class="title_category"><img src="../assets/images/icons8-ticket-64.png" alt="" height="35px"> Tarifs</h2>
       </div>
       <div class="prices_info">
         <div class="ticket">
@@ -144,7 +144,7 @@
     </div>
     <section id="contact" class="contact">
       <div class="form_contact">
-        <h2>Nous contacter</h2>
+        <h2><img src="../assets/images/icons8-étoile-50.png" alt="" height="35px"> Nous contacter</h2>
         <p>Une question ? une suggestion de film ? Ecrivez-nous un message:</p>
         <form action="">
           <div class="box_form">
@@ -163,7 +163,7 @@
         </form>
       </div>
       <div class="map">
-        <h2>Où sommes nous situé?</h2>
+        <h2><img src="../assets/images/icons8-bobine-de-film-80.png" alt="" height="35px"> Où sommes nous situé?</h2>
           <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
             <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
           var setting = {"height":318,"width":601,"zoom":10,"queryString":"44 Rue du Feuillet, 69700 Beauvallon, France","place_id":"ChIJGSVZs0jk9EcRA3bfcTUczgA","satellite":false,"centerCoord":[45.60776796622083,4.733960849999996],"cid":"0xce1c3571df7603","lang":"fr","cityUrl":"/france/lyon","cityAnchorText":"Carte de Lyon, Rhône-Alpes, France","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"232343"};
