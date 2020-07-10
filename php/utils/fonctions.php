@@ -189,7 +189,7 @@ $nextMovies = [
     ' L\'étrange histoire de Benjamin Button',
     ' Jumanji',
     ' Un jour sans fin',
-    ' l\'effet papillon',
+    ' L\'effet papillon',
     ' Twillight, chapitre 1 : Fascination',
     ' Entretien avec un vampire',
     ' Le monde de Narnia, chapitre 1',
