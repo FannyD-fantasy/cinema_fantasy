@@ -1,18 +1,9 @@
 {
-    "name": "Cinema Fantasy",
-    "description": "Cinéma de films fantastiques",
-    "type": "project",
-    "authors": [
-        {
-            "name": "Fanny",
-            "email": "dansmonbaluchon@gmail.com"
-        }
-    ],
     "require": {
         "symfony/var-dumper": "^5.0",
         "altorouter/altorouter": "^2.0"
     },
     "autoload": {
-        "psr-4": {"Pokedex\\": "app/"}
+        "psr-4": {"CinemaFantasy\\": "app/"}
     }
 }
