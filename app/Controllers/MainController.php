@@ -5,10 +5,14 @@ class MainController {
 
     public function home()
     {
+        $programmationModel = new Cinema();
+        $programmationListMovie = $programmationModel->findAllProgramm();
+
         $this->show('index',
         [
-            'title'         =>'welcome',
-            'currentNavLink'=>'index',
+            'title'                     =>'welcome',
+            'currentNavLink'            =>'index',
+            'programmationListMovie'    => $programmationListMovie
         ]
         );
     }
@@ -25,10 +29,14 @@ class MainController {
             'currentNavLink' => null,
         ]);
     }
-    public function show()
+    public function show($viewName, $viewVars = [])
     {
+        // url absolu vers le dossier public
+        $absoluteUrl = $_SERVER['BASE_URI'];
+        extract($viewVars); 
+
         require_once __DIR__.'/../views/head.tpl.php';
-        require_once __DIR__.'/../views/index.tpl.php';
+        require_once __DIR__.'/../views/'.$viewName.'.tpl.php';
         require_once __DIR__.'/../views/footer.tpl.php';
     }
 }

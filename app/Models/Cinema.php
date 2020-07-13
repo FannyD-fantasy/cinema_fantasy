@@ -16,7 +16,7 @@ class Cinema
         $pdoStatement = $pdo->query($sql);
 
         $programmationListMovie = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Cinema');
-        //dump($programmationListMovie);
+        dump($programmationListMovie);
         return $programmationListMovie;
     }
     

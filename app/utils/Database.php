@@ -9,7 +9,7 @@ class Database {
     private function __construct() {
         // Récupération des données du fichier de config
         // la fonction parse_ini_file parse le fichier et retourne un array associatif
-        $configData = parse_ini_file(__DIR__.'/../config.ini');
+        $configData = parse_ini_file(__DIR__.'/../config.ini'); 
         
         try {
             $this->dbh = new PDO(
