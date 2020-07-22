@@ -96,23 +96,20 @@
         <h2 class="title_category"><img src="../public/assets/images/icons8-cinéma-50.png" alt="" height="35px"> Programme - Semaine du 6 au 12 Juillet</h2>
       </div>
       <div class="week">
-        <?php 
-          foreach ($programmationListMovie as $programmationMovie) {
-            ?>
+        
             <div class="day">
-              <div class="date"><?php echo $programmationMovie->getDay(); ?> </div>
+              <div class="date"><?php echo $demain; ?> </div>
                 <div class="programme_of_day">   
                   
                     <div class="one_show">
-                      <div class="hours"><?php echo $programmationMovie->gethour(); ?></div>
-                      <div class="movie_of_hour"><?php echo $programmationMovie->getMovie(); ?></div>
+                      <div class="hours"><?php echo 'heure'; ?></div>
+                      <div class="movie_of_hour"><?php echo 'film'; ?></div>
                       <p>- - - - - - - - - -</p>
                     </div>
                   
               </div>
             </div>
-          <?php }
-        ?>
+         
       </div>
     </section>
     <section id="prices" class="prices">

@@ -194,3 +194,17 @@ $nextMovies = [
     ' Entretien avec un vampire',
     ' Le monde de Narnia, chapitre 1',
 ];
+
+
+
+setlocale(LC_TIME, 'fr_FR.UTF8');
+ 
+$date = strftime('%A %d %B'); // jeudi 11 octobre 2012, 16:03
+
+$demain = strftime('%A %d %B', strtotime('+1 day'));
+
+$from = new \DateTime('-1 month');
+$to = new \DateTime('now');
+
+$inverval = \DateInterval::createFromDateString('1 day');
+$days = new \DatePeriod($from, $interval, $to);
