@@ -41,7 +41,8 @@ header {
 }
 
 .header_title {
-  padding-top: 15px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
   padding-left: 2rem;
 }
 
@@ -61,7 +62,8 @@ header {
 
 .nav li {
   display: inline-block;
-  padding-top: 15px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
 }
 
 .nav li a {
@@ -251,12 +253,12 @@ strong {
 }
 
 .week {
- display: flex;
- justify-content: center;
- margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
-.day {
+.day { 
   text-align: center;
   padding: 0.5rem;
   width: 100%;
@@ -336,6 +338,12 @@ strong {
   background-color: transparent;
   transform: rotate(160deg);
   margin-bottom: 30px;
+}
+
+.price_reduce {
+  font-size: 10px;
+  color: lightgray;
+  text-align: center;
 }
 
 .contact {
@@ -449,4 +457,9 @@ h5 {
   font-weight: 300;
   color: #99681C;
   padding-bottom: 1rem;
+}
+
+.menu_background {
+  background-color: #1e3f6dcc;
+  transition: all 0.2s ease;
 }

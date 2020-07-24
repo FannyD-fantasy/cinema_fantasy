@@ -5,14 +5,11 @@ class MainController {
 
     public function home()
     {
-        $programmationModel = new Cinema();
-        $programmationListMovie = $programmationModel->findAllProgramm();
-
+    
         $this->show('index',
         [
             'title'                     =>'welcome',
-            'currentNavLink'            =>'index',
-            'programmationListMovie'    => $programmationListMovie
+            'currentNavLink'            =>'index'
         ]
         );
     }

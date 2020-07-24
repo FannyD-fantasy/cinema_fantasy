@@ -96,20 +96,21 @@
         <h2 class="title_category"><img src="../public/assets/images/icons8-cinéma-50.png" alt="" height="35px"> Programme - Semaine du 6 au 12 Juillet</h2>
       </div>
       <div class="week">
-        
+      <?php foreach ($programmingMovies as $clef => $day) { ?>
             <div class="day">
-              <div class="date"><?php echo $demain; ?> </div>
+              <div class="date"><?php echo $clef; ?></div>
                 <div class="programme_of_day">   
-                  
+                <?php foreach ($day as $timmingMovie => $valeur) {	
+                    ?>
                     <div class="one_show">
-                      <div class="hours"><?php echo 'heure'; ?></div>
-                      <div class="movie_of_hour"><?php echo 'film'; ?></div>
+                      <div class="hours"><?php echo $timmingMovie; ?></div>
+                      <div class="movie_of_hour"><?php echo $valeur; ?></div>
                       <p>- - - - - - - - - -</p>
                     </div>
-                  
+                    <?php } ?>
               </div>
             </div>
-         
+                <?php }?>
       </div>
     </section>
     <section id="prices" class="prices">
@@ -125,6 +126,7 @@
             <li>Plein Tarif : <?php echo $prices['plein']; ?> &euro;</li>
             <li>Enfant - de 16 ans : <?php echo $prices['enfant']; ?> &euro;</li>
             <li>Tarif réduit * : <?php echo $prices['reduit']; ?> &euro;</li>
+            <p class="price_reduce">* Carte vermeil, demandeur d'emploi, carte famille nombreuse et handicapé. Justificatif obligatoire</p>
           </ul>
         </div>
         <div>
@@ -134,6 +136,7 @@
           </ul>
         </div>
       </div>
+      
     </section>
     <div class="line_separation">
       <hr>
@@ -161,18 +164,21 @@
       <div class="map">
         <h2><img src="../public/assets/images/icons8-bobine-de-film-80.png" alt="" height="35px"> Où sommes nous situé?</h2>
           <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-            <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
-          var setting = {"height":318,"width":601,"zoom":10,"queryString":"44 Rue du Feuillet, 69700 Beauvallon, France","place_id":"ChIJGSVZs0jk9EcRA3bfcTUczgA","satellite":false,"centerCoord":[45.60776796622083,4.733960849999996],"cid":"0xce1c3571df7603","lang":"fr","cityUrl":"/france/lyon","cityAnchorText":"Carte de Lyon, Rhône-Alpes, France","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"232343"};
-          var d = document;
-          var s = d.createElement('script');
-          s.src = 'https://1map.com/js/script-for-user.js?embed_id=232343';
-          s.async = true;
-          s.onload = function (e) {
-            window.OneMap.initMap(setting)
-          };
-          var to = d.getElementsByTagName('script')[0];
-          to.parentNode.insertBefore(s, to);
-        })();</script><a href="https://1map.com/fr/map-embed">1 Map</a></div>          
+            <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+            <script>(function () {
+            var setting = {"height":528,"width":803,"zoom":17,"queryString":"Boulevard du Pilat, 69440 Mornant, France","place_id":"EilCb3VsZXZhcmQgZHUgUGlsYXQsIDY5NDQwIE1vcm5hbnQsIEZyYW5jZSIuKiwKFAoSCXUiev0q-_RHEVUMKs5kwFhuEhQKEgktObK4Kfv0RxG5j91MWUuRkw","satellite":false,"centerCoord":[45.61633501622571,4.675099400000002],"cid":"0x6e58c064ce2a0c55","lang":"fr","cityUrl":"/france/lyon","cityAnchorText":"Carte de Lyon, Rhône-Alpes, France","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"242208"};
+            var d = document;
+            var s = d.createElement('script');
+            s.src = 'https://1map.com/js/script-for-user.js?embed_id=242208';
+            s.async = true;
+            s.onload = function (e) {
+              window.OneMap.initMap(setting)
+            };
+            var to = d.getElementsByTagName('script')[0];
+            to.parentNode.insertBefore(s, to);
+            })();
+          </script>
+        </div>          
       </div>
     </section>
    

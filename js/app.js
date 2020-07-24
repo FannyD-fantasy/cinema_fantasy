@@ -61,15 +61,25 @@ function addBackgroundNavBarOnScroll () {
     console.log('position dans la page', getPositionInPage);
     
 
-    if (getPositionInPage > image){
-        document.getElementById("header_menu").style.backgroundColor = "#1e3f6d90";
+    if (getPositionInPage >= image - 50){
+        document.getElementById("header_menu").classList.add('menu_background');
     } else {
-        document.getElementById("header_menu").style.backgroundColor = "transparent";
+        document.getElementById("header_menu").classList.remove('menu_background');
     }
 }
     
 
-
+$(".header_nav a").on('click', function (event) {
+    if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top -75
+        }, 900, function () {
+            window.location.hash = hash - 75;
+        });
+    }
+});
 
 
 document.addEventListener(
