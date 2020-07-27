@@ -23,6 +23,27 @@ $router -> map(
   'home'
 );
 
+$router -> map(
+  'GET',
+  '/contact',
+  [
+    'controller'=>'MainController',
+    'method'=>'contact'
+  ],
+  'contact'
+);
+
+$router -> map(
+  'POST',
+  '/contactForm',
+  [
+    'controller'=>'MainController',
+    'method'=>'contactForm'
+  ],
+  'contactForm'
+);
+
+
 $match = $router->match();
 
 $controller = new MainController();

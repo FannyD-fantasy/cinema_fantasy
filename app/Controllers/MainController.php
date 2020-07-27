@@ -8,8 +8,26 @@ class MainController {
     
         $this->show('index',
         [
-            'title'                     =>'welcome',
-            'currentNavLink'            =>'index'
+            'title'            =>'welcome',
+            'currentNavLink'   =>'index'
+        ]
+        );
+    }
+    public function contact()
+    {
+    
+        $this->show('contact',
+        [
+            'title'             =>'formulaire de contact',
+            'currentNavLink'    =>'contact'
+        ]
+        );
+    }
+    public function contactForm(){
+        $this->show('contactForm',
+        [
+            'title' =>'formulaire contact',
+            'currentNavLink' =>'contactForm'
         ]
         );
     }
@@ -28,6 +46,7 @@ class MainController {
     }
     public function show($viewName, $viewVars = [])
     {
+        global $router;
         // url absolu vers le dossier public
         $absoluteUrl = $_SERVER['BASE_URI'];
         extract($viewVars); 
