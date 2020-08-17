@@ -146,22 +146,22 @@
         <h2><img src="../public/assets/images/icons8-étoile-50.png" alt="" height="35px"> Nous contacter</h2>
         <p>Une question ? une suggestion de film ? Ecrivez-nous un message:</p>
 
-        <form action="<?php echo $router->generate('contact'); ?>" method="POST">
+        <form action="../app/views/sendMail.tpl.php" method="POST">
           <div class="box_form">
             <label for="input_name">Nom Prénom</label> <br>
             <input type="text" placeholder=""  name="name" id="input_name">
           </div>
           <div class="box_form">
             <label for="input_email">Email</label> <br>
-            <input type="email" name="" id="" placeholder=""  name="email" id="input_email">
+            <input type="email" id="" placeholder=""  name="email" id="input_email">
           </div>
           <div class="box_form">
             <label for="input_message">Message</label> <br>
-            <textarea name="" id="" cols="30" rows="5" placeholder=""  name="message" id="input_message"></textarea>
+            <textarea id="" cols="30" rows="5" placeholder=""  name="message" id="input_message"></textarea>
           </div>
           <input type="submit" value="Envoyer">
         </form>
-<?php var_dump($_POST); ?>
+
       </div>
       <div class="map">
         <h2><img src="../public/assets/images/icons8-bobine-de-film-80.png" alt="" height="35px"> Où sommes nous situé?</h2>

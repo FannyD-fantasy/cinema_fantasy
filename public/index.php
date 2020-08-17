@@ -24,23 +24,12 @@ $router -> map(
 );
 
 $router -> map(
-  'GET',
+  'POST',
   '/contact',
   [
     'controller'=>'MainController',
     'method'=>'contact'
-  ],
-  'contact'
-);
-
-$router -> map(
-  'POST',
-  '/contactForm',
-  [
-    'controller'=>'MainController',
-    'method'=>'contactForm'
-  ],
-  'contactForm'
+  ]
 );
 
 

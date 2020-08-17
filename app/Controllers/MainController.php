@@ -13,9 +13,10 @@ class MainController {
         ]
         );
     }
+
     public function contact()
     {
-    
+
         $this->show('contact',
         [
             'title'             =>'formulaire de contact',
@@ -23,14 +24,7 @@ class MainController {
         ]
         );
     }
-    public function contactForm(){
-        $this->show('contactForm',
-        [
-            'title' =>'formulaire contact',
-            'currentNavLink' =>'contactForm'
-        ]
-        );
-    }
+    
     public function error404()
     {
         // On modifie le status code de la réponse HTTP
