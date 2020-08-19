@@ -38,12 +38,15 @@ header {
   left: 0;
   top: 0;
   z-index: 10000;
+  width: 100%;
 }
 
 .header_title {
   padding-top: 7.5px;
   padding-bottom: 7.5px;
   padding-left: 2rem;
+  display: flex;
+  align-items: center;
 }
 
 .header_nav {
@@ -312,13 +315,13 @@ strong {
 .prices_info {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
   
 }
 
 .prices_info div {
-  margin-left: 120px;
 }
 
 .prices_info ul {
@@ -462,4 +465,126 @@ h5 {
 .menu_background {
   background-color: #1e3f6dcc;
   transition: all 0.2s ease;
+  width: 100%;
+}
+
+@media screen and (max-width: 1550px) {
+  .week {
+    flex-wrap: wrap;
+  }
+
+  .day {
+    width: auto;
+  }
+
+  .presentation {
+    flex-wrap: wrap;
+  }
+
+  .title_category {
+    padding-left: 4rem;
+  }
+
+  .img_presentation img {
+    width: 75%;
+  }
+
+  .img_presentation {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .header_nav {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .header_nav {
+    margin-left: 10px;
+  }
+  
+  h1 {
+    font-size: 45px;
+  }
+
+  .principal_footer {
+    flex-wrap: wrap;
+  }
+
+  .prices_info {
+    flex-wrap: wrap;
+  }
+
+  .prices_info div {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  
+  .contact {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  .nav li a {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 964px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .header_nav {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .map {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 698px) {
+  /* todo : menu burger */
+
+  .footer_sociaux_text {
+    font-size: 22px;
+  }
+
+  .next_movies_title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+}
+
+@media screen and (max-width: 530px) {
+  .social_media {
+    padding-bottom: 1rem;
+  }
+
+  .form_contact {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 458px) {
+  .next_movies_title {
+    font-size: 18px;
+  }
+
+  .bloc_price {
+    width: 80%;
+  }
 }

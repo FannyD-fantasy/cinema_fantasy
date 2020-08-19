@@ -96,21 +96,21 @@
         <h2 class="title_category"><img src="../public/assets/images/icons8-cinéma-50.png" alt="" height="35px"> Programme - Semaine du 6 au 12 Juillet</h2>
       </div>
       <div class="week">
-      <?php foreach ($programmingMovies as $clef => $day) { ?>
-            <div class="day">
-              <div class="date"><?php echo $clef; ?></div>
-                <div class="programme_of_day">   
-                <?php foreach ($day as $timmingMovie => $valeur) {	
-                    ?>
-                    <div class="one_show">
-                      <div class="hours"><?php echo $timmingMovie; ?></div>
-                      <div class="movie_of_hour"><?php echo $valeur; ?></div>
-                      <p>- - - - - - - - - -</p>
-                    </div>
-                    <?php } ?>
-              </div>
-            </div>
-                <?php }?>
+        <?php foreach ($programmingMovies as $clef => $day) { ?>
+        <div class="day">
+          <div class="date"><?php echo $clef; ?></div>
+            <div class="programme_of_day">   
+            <?php foreach ($day as $timmingMovie => $valeur) {	
+                ?>
+                <div class="one_show">
+                  <div class="hours"><?php echo $timmingMovie; ?></div>
+                  <div class="movie_of_hour"><?php echo $valeur; ?></div>
+                  <p>- - - - - - - - - -</p>
+                </div>
+                <?php } ?>
+          </div>
+        </div>
+        <?php }?>
       </div>
     </section>
     <section id="prices" class="prices">
@@ -121,7 +121,7 @@
         <div class="ticket">
           <i class="fas fa-ticket-alt"></i>
         </div>
-        <div>
+        <div class="bloc_price">
           <ul>
             <li>Plein Tarif : <?php echo $prices['plein']; ?> &euro;</li>
             <li>Enfant - de 16 ans : <?php echo $prices['enfant']; ?> &euro;</li>
@@ -146,7 +146,7 @@
         <h2><img src="../public/assets/images/icons8-étoile-50.png" alt="" height="35px"> Nous contacter</h2>
         <p>Une question ? une suggestion de film ? Ecrivez-nous un message:</p>
 
-        <form action="../app/views/sendMail.tpl.php" method="POST">
+        <form action="" method="POST">
           <div class="box_form">
             <label for="input_name">Nom Prénom</label> <br>
             <input type="text" placeholder=""  name="name" id="input_name">
@@ -165,7 +165,7 @@
       </div>
       <div class="map">
         <h2><img src="../public/assets/images/icons8-bobine-de-film-80.png" alt="" height="35px"> Où sommes nous situé?</h2>
-          <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+          <div class="map" id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
             <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
             <script>(function () {
             var setting = {"height":528,"width":803,"zoom":17,"queryString":"Boulevard du Pilat, 69440 Mornant, France","place_id":"EilCb3VsZXZhcmQgZHUgUGlsYXQsIDY5NDQwIE1vcm5hbnQsIEZyYW5jZSIuKiwKFAoSCXUiev0q-_RHEVUMKs5kwFhuEhQKEgktObK4Kfv0RxG5j91MWUuRkw","satellite":false,"centerCoord":[45.61633501622571,4.675099400000002],"cid":"0x6e58c064ce2a0c55","lang":"fr","cityUrl":"/france/lyon","cityAnchorText":"Carte de Lyon, Rhône-Alpes, France","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"242208"};

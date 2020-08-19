@@ -22,14 +22,16 @@
         <div class="header_title">
           <h1>Cinéma Fantasy</h1>
         </div>
-        <nav class="header_nav">
-          <ul class="nav">
-            <li><a href="#ensalle">En salle</a></li>
-            <li><a href="#programme">Programme</a></li>
-            <li><a href="#prices">Tarifs</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+        <div>
+          <nav class="header_nav">
+            <ul class="nav">
+              <li><a href="#ensalle">En salle</a></li>
+              <li><a href="#programme">Programme</a></li>
+              <li><a href="#prices">Tarifs</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
