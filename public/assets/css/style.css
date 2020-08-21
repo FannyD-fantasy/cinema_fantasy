@@ -554,12 +554,19 @@ h5 {
     width: auto;
   }
 
-  .presentation {
-    flex-wrap: wrap;
+  .header_nav {
+    margin-left: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .header_nav {
+    margin-left: 10px;
   }
 
-  .title_category {
-    padding-left: 4rem;
+  .presentation {
+    flex-wrap: wrap;
   }
 
   .img_presentation img {
@@ -573,15 +580,8 @@ h5 {
     text-align: center;
   }
 
-  .header_nav {
-    margin-left: 10px;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .header_nav {
-    margin-left: 10px;
+  .title_category {
+    padding-left: 4rem;
   }
 
   h1 {
