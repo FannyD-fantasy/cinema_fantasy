@@ -53,12 +53,12 @@ function addBackgroundNavBarOnScroll () {
     // je récupère la taille de l'image par rapport au haut de la page
     let image = getPositionImage.offsetTop;
 
-    console.log('image', image);
+    
 
     // je récupère la taille de la fenêtre de l'utlisateur 
     let getPositionInPage = window.pageYOffset;
 
-    console.log('position dans la page', getPositionInPage);
+    
     
 
     if (getPositionInPage >= image - 50){
@@ -87,6 +87,15 @@ $(function() {
       return false;
     });
 }); 
+
+if($(window).width() <= 1300){
+    
+    $('line_img_movies').square1({
+        fill_mode: 'contain',
+        animation: 'slide',
+        auto_start: false
+    });
+}
 
 document.addEventListener(
     'DOMContentLoaded', 

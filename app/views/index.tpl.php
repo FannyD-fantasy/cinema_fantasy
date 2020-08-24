@@ -4,7 +4,7 @@
     include '../app/utils/fonctions.php';
     $prices = getPrices();
     ?>
-    <section class="presentation">
+    <section class="presentation ok">
       <div class="text_presentation">
         <h2 class="title_category"><img src="../public/assets/images/icons8-projecteur-de-film-26.png" alt="" height="35px"> Découvrez notre cinéma familliale et atypique!</h2>
         <div class="text">
@@ -58,20 +58,21 @@
                       <img src="<?php echo $movies[$loopInfos]['image']; ?>" alt="">
                     </div>
                     <div class="detail_movie">
-                      <h3>
-                        <?php echo $movies[$loopInfos]['title']; ?> 
-                        (<?php echo $movies[$loopInfos]['annéeDeSortie']; ?>)
-                        <span class="rate_movie"><?php echo $movies[$loopInfos]['avis']; ?> 
-                        <i class="fas fa-star"></i></span>
-                      </h3>
-                      <h4>Réalisé par <strong><?php echo $movies[$loopInfos]['realisateur']; ?></strong></h4>
-                      <h4>Avec <strong><?php echo $movies[$loopInfos]['acteur']; ?></strong></h4>
-                      <div class="time_age">
-                        <span><?php echo $movies[$loopInfos]['durée']; ?></span>
-                        <span class="age"><?php echo $movies[$loopInfos]['age']; ?></span>
+                      <div class="detail_infos">
+                        <h3>
+                          <?php echo $movies[$loopInfos]['title']; ?> 
+                          (<?php echo $movies[$loopInfos]['annéeDeSortie']; ?>)
+                          <span class="rate_movie"><?php echo $movies[$loopInfos]['avis']; ?> 
+                          <i class="fas fa-star"></i></span>
+                        </h3>
+                        <h4>Réalisé par <strong><?php echo $movies[$loopInfos]['realisateur']; ?></strong></h4>
+                        <h4>Avec <strong><?php echo $movies[$loopInfos]['acteur']; ?></strong></h4>
+                        <div class="time_age">
+                          <span><?php echo $movies[$loopInfos]['durée']; ?></span>
+                          <span class="age"><?php echo $movies[$loopInfos]['age']; ?></span>
+                        </div>
                       </div>
-                      <p><?php echo $movies[$loopInfos]['synopsis']; ?></p>
-                      <div></div>
+                      <p class="detail_synopsis"><?php echo $movies[$loopInfos]['synopsis']; ?></p>
                     </div>
 
                   </div>
