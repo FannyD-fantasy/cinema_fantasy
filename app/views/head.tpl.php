@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <title>Cinéma Fantasy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="../public/assets/css/reset.css">
   <link rel="stylesheet" href="../public/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
       integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
-      <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> 
 </head>
 <body>
   <header>
@@ -42,8 +42,6 @@
     </div>
     <section class="scroll">
       <a href="#" class="scroll-down" address="true"></a>
-    </section>
-    <section class="ok">
     </section>
   </header>
   <main id="after_img_background"> 

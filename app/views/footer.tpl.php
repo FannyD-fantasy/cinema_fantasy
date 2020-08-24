@@ -87,7 +87,7 @@
       </div>
     </section>
     <section class="name_website">
-      <p><strong id="name_cinema"> Cinema fantasy </strong> - 44 rue du feuillet 69700 BEAUVALLON</p>
+      <p><strong id="name_cinema"> Cinema fantasy </strong> - Boulevard du pilat 69440 MORNANT</p>
       <p>FannyD. Fantasy | <i class="fas fa-cloud"></i></p>
     </section>
   </footer>
@@ -95,5 +95,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
 </body>
 </html>
