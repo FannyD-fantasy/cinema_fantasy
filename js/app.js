@@ -15,6 +15,24 @@ function addListenerCrossButton (){
     for (var w = 0; w < crossNameElement.length; w++) {
         crossNameElement[w].addEventListener('click', removeInfoMovie)
     }
+
+    let slideClosedInfoPrev = document.querySelectorAll('.square1_prev_image');
+
+    for (var x = 0; x < slideClosedInfoPrev.length; x++) {
+        slideClosedInfoPrev[x].addEventListener('click', removeInfoMovie)
+    }
+
+    let slideClosedInfoNext = document.querySelectorAll('.square1_next_image');
+
+    for (var y = 0; y < slideClosedInfoNext.length; y++) {
+        slideClosedInfoNext[y].addEventListener('click', removeInfoMovie)
+    }
+
+    let slideClosedInfoDots = document.querySelectorAll('.square1_dots>span');
+
+    for (var z = 0; z < slideClosedInfoDots.length; z++) {
+        slideClosedInfoDots[z].addEventListener('click', removeInfoMovie)
+    }
 }
 
 function removeInfoMovie () {
@@ -90,12 +108,48 @@ $(function() {
 
 if($(window).width() <= 1300){
     
-    $('line_img_movies').square1({
+    $('#slide0').square1({
+        fill_mode: 'contain',
+        animation: 'slide',
+        auto_start: false
+    });
+
+    $('#slide5').square1({
         fill_mode: 'contain',
         animation: 'slide',
         auto_start: false
     });
 }
+
+var amountScrolled = 200;
+var amountScrolledNav = 25;
+
+$(window).scroll(function() {
+  if ( $(window).scrollTop() > amountScrolled ) {
+    $('button.back-to-top').addClass('show');
+  } else {
+    $('button.back-to-top').removeClass('show');
+  }
+});
+
+$('button.back-to-top').click(function() {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 800);
+  return false;
+});
+
+// Ignore this
+// This is just for content manipulation
+var skeleton = '<div class="skeleton"><div class="skeleton-wrapper"><div class="skeleton-wrapper-inner"><div class="skeleton-wrapper-body"><div class="skeleton-avatar"></div><div class="skeleton-author"></div><div class="skeleton-label"></div><div class="skeleton-content-1"></div><div class="skeleton-content-2"></div><div class="skeleton-content-3"></div></div></div></div></div>';
+for(var i=0;i<10;i++){
+  $('#content').append(skeleton); 
+}
+
+// Add waves effect
+Waves.attach('button.back-to-top', 'waves-effect');
+Waves.init();
+
 
 document.addEventListener(
     'DOMContentLoaded', 

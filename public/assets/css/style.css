@@ -87,6 +87,66 @@ header {
   text-decoration: none;
 }
 
+button.back-to-top{
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #fff;
+	height: 0px;
+  width: 0px;
+  overflow: hidden;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+  color: transparent;
+	clear: both;
+  visibility: hidden;
+  position: fixed;
+  cursor: pointer;
+  display: block;
+  border: none;
+  right: 50px;
+	bottom: 75px;
+  font-size: 0px;
+  outline: 0 !important;
+  z-index: 99;
+  transition: all .3s ease-in-out;
+}
+
+button.back-to-top:hover,
+button.back-to-top:active,
+button.back-to-top:focus,{
+  outline: 0 !important;
+}
+
+button.back-to-top::before {
+  content: "\f077";
+  font-family: "FontAwesome";
+  display: block;
+  vertical-align: middle;
+  margin: -5px 0 auto;
+}
+
+button.back-to-top.show {
+  display: block;
+  background: #fff;
+  color: #99681C;
+  font-size: 25px;
+  right: 25px;
+	bottom: 50px;
+  height: 50px;
+  width: 50px;
+  visibility: visible;
+	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+button.back-to-top.show:active {
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
 .scroll {
   height: 100vh;
   width: 100%;
@@ -196,6 +256,38 @@ h2 {
   margin-left: 2rem;
 }
 
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.animation_info_movie {
+  font-size: 20px;
+}
+
+.animation_span:after{
+  color: red;
+  content: "";
+  animation: myanim 5s ease-in-out infinite;
+}
+
+@keyframes myanim{
+ 0%{
+ content: "Slidez et";
+}
+33.33%{
+ content: "Cliquez sur l'affiche";
+}
+66.66%{
+ content: "pour afficher les infos";
+}
+100%{
+ content: "des films";
+}
+}
+
 .line_img_movies {
   display: flex;
   justify-content: space-between;
@@ -270,7 +362,6 @@ h2 {
 
 .detail_synopsis {
   height: 60%;
-  overflow-y: scroll;
   white-space: pre-line;
 }
 
@@ -405,10 +496,6 @@ strong {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  
-}
-
-.prices_info div {
 }
 
 .prices_info ul {
@@ -512,6 +599,7 @@ footer {
 
 .name_website {
   text-align: center;
+  margin-top: 2rem;
 }
 
 #name_cinema {
@@ -622,6 +710,29 @@ h5 {
   .poster_movie {
     display: none;
   }
+
+  .slideshow {
+    max-width: 600px;
+    height: 450px;
+    margin: 0 auto 40px;
+  }
+
+  .detail_synopsis {
+    overflow-y: scroll;
+  }
+
+  .line_img_movies {
+    padding: 0;
+  }
+
+  .line_info_movies {
+    margin-bottom: 2rem;
+  }
+
+  .parent {
+    display: block;
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 1028px) {
@@ -687,5 +798,9 @@ h5 {
 
   .bloc_price {
     width: 80%;
+  }
+
+  h1 {
+    font-size: 25px;
   }
 }

@@ -10,6 +10,8 @@
     position: relative;
     height: 100%;
 	overflow: hidden;
+	width: 100%;
+	border: none;
 }
 
 .image_wrapper,
@@ -286,7 +288,7 @@
 }
 
 .theme-light .square1_spinner {
-	border-top: 5px solid rgba(255,255,255,.5);
+	border-top: 5px solid rgba(109, 16, 16, 0.5);
 }
 
 
