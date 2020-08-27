@@ -146,10 +146,6 @@ for(var i=0;i<10;i++){
   $('#content').append(skeleton); 
 }
 
-// Add waves effect
-Waves.attach('button.back-to-top', 'waves-effect');
-Waves.init();
-
 
 document.addEventListener(
     'DOMContentLoaded', 

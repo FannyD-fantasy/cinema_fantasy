@@ -733,6 +733,10 @@ h5 {
     display: block;
     display: flex;
   }
+
+  .one_movie.selected::after {
+    content: none;
+  }
 }
 
 @media screen and (max-width: 1028px) {
