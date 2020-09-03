@@ -820,3 +820,9 @@ h5 {
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 304px) {
+  h1 {
+    font-size: 15px;
+  }
+}
