@@ -825,4 +825,13 @@ h5 {
   h1 {
     font-size: 15px;
   }
+
+  .navbar-toggler {
+    padding: 0.12rem 0.12rem;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
 }
