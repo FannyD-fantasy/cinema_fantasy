@@ -63,7 +63,7 @@
                 </div>
                 <div class="detail_movie">
                   <div class="detail_infos">
-                    <h3>
+                    <h3 class="titre_film">
                       <?php echo $movies[$loopInfos]['title']; ?> 
                       (<?php echo $movies[$loopInfos]['annéeDeSortie']; ?>)
                       <span class="rate_movie"><?php echo $movies[$loopInfos]['avis']; ?> 

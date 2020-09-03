@@ -719,6 +719,7 @@ h5 {
 
   .detail_synopsis {
     overflow-y: scroll;
+    margin-top: 2rem;
   }
 
   .line_img_movies {
@@ -737,6 +738,11 @@ h5 {
   .one_movie.selected::after {
     content: none;
   }
+
+  .titre_film {
+    font-size: 1rem;
+  }
+
 }
 
 @media screen and (max-width: 1028px) {
@@ -806,5 +812,11 @@ h5 {
 
   h1 {
     font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 383px) {
+  h1 {
+    font-size: 18px;
   }
 }
