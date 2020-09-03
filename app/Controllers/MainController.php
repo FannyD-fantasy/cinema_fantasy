@@ -13,17 +13,6 @@ class MainController {
         ]
         );
     }
-
-    public function contact()
-    {
-
-        $this->show('contact',
-        [
-            'title'             =>'formulaire de contact',
-            'currentNavLink'    =>'contact'
-        ]
-        );
-    }
     
     public function error404()
     {
@@ -46,7 +35,7 @@ class MainController {
         extract($viewVars); 
 
         require_once __DIR__.'/../views/head.tpl.php';
-        require_once __DIR__.'/../views/'.$viewName.'.tpl.php';
+        require_once __DIR__.'/../views/index.tpl.php';
         require_once __DIR__.'/../views/footer.tpl.php';
     }
 }

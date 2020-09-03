@@ -23,16 +23,6 @@ $router -> map(
   'home'
 );
 
-$router -> map(
-  'POST',
-  '/contact',
-  [
-    'controller'=>'MainController',
-    'method'=>'contact'
-  ]
-);
-
-
 $match = $router->match();
 
 $controller = new MainController();
